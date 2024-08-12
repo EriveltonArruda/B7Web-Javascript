@@ -10,6 +10,6 @@ O valor que está DEPOIS da interrogação (?) é o valor verdadeiro, o que est�
 
 ## Exemplos da aula:
 
-O exemplo inicial está calculando o frete de uma loja virtual, so frete de membros é 2 e o frete para não membros é 10.
+O exemplo inicial está calculando o frete de uma loja virtual, o frete de membros é 2 e o frete para não membros é 10.
 
 O segundo exemplo é só verificação de idade mesmo.
