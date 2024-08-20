@@ -2,12 +2,13 @@
 /*
 let nome = "Erivelton";
 console.log(nome);
+
 // Reassimilando seu valor, agora nome deixará de ser Erivelton e passará a ser João
 nome = "João";
 console.log(nome);
 */
 
-// Criavo variáveis com var
+// Criando variáveis com var
 /*
 var nome = "Erivelton";
 console.log(nome);
