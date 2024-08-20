@@ -10,5 +10,4 @@ console.log(idade)
 // let nome = "Erivelton"  let idade = 90 // vai dar SyntaxError
 
 // Pode ser feito em uma linha também
-let nome = "Erivelton";
-let idade = 90;
+let nome = "Erivelton"; let idade = 90;
