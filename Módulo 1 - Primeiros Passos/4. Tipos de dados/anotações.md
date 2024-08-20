@@ -14,7 +14,7 @@ Objeto é como se fosse um array, mas ele tem um detalhe extra, ele consegue ter
 
 ## Typeof
 
-Podemos verificar o tipo da variável utilizando o typeof, ele literalmente nos fala o tipo de dado daquela variável escolhida, geralmente utilizamos o typeof dentro de um console.log.
+Podemos verificar o tipo da variável utilizando o typeof, ele literalmente nos fala o tipo de dado daquela variável escolhida, geralmente utilizamos o typeof dentro de um console.log().
 
 // parâmetros do typeof
 console.log(typeof _variável_)

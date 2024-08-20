@@ -1,7 +1,5 @@
-// let nome = "Erivelton";
+/* Quando um número está em aspas, não é feita a operação matemática, mas sim uma concatenação (junção) de códigos, nesse caso a soma não será 11 e sim 101.
 
-// Quando um número está em aspas, não é feita a operação matemática, mas sim uma concatenação (junção) de códigos, nesse caso a soma não será 11 e sim 101.
-/* 
 let n1 = 10;
 let n2 = "1";
 let soma = n1 + n2;
