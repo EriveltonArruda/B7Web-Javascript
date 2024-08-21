@@ -21,6 +21,6 @@ console.log(nome);
 const nome = "Erivelton";
 console.log(nome);
 
-// Como é uma constante, não podemos reassimilar seu valor como fazemos com let
+// Como é uma constante (um valor que não muda), não podemos reassimilar seu valor como fazemos com let
 nome = "João";
 console.log(nome);
