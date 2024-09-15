@@ -20,9 +20,6 @@ let personagem = {
   },
 };
 
-// Selecionando um item dentro de um array a partir da sua posição
-console.log(nomes[0]);
-
 /* Para selecionar um item de um objeto digitamos o nome do objeto (propriedade) seguido da sua chave depois de um ponto(.) */
 console.log(`${personagem.nome} tem ${personagem.idade} anos`);
 
