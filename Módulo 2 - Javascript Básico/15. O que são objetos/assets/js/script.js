@@ -12,7 +12,7 @@ let personagem = {
   País: "Brasil",
   // Array dentro de objetos
   olhos: ["Preto", "Azul"],
-  características: {
+  caracteristicas: {
     // Não posso colocar caracteres especiais como "ç"
     forca: 20,
     magia: 5,
@@ -24,7 +24,7 @@ let personagem = {
 console.log(`${personagem.nome} tem ${personagem.idade} anos`);
 
 // Selecionando um objeto dentro de outro objeto
-console.log(personagem.características.magia);
+console.log(personagem.caracteristicas.magia);
 
 // Selecionando o valor do array que está dentro do objeto
 console.log(personagem.olhos[1]);
