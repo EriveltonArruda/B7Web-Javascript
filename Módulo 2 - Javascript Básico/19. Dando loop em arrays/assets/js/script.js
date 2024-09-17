@@ -7,19 +7,19 @@ então na primeira execução n vai ser [0] e seu valor será preto,
 na segunda execução n será [1], então ele será branco e assim sucessivamente.
 
 for (let n = 0; n < 15/ n++) {
-  console.log(cores[n]); // Vai ter 11 undefined
+  console.log(cores[n]); // Vai ter 11 undefined além dos itens do array
 }
 
 fazendo o mesmo que o loop acima, só que dessa vez, a condição vai ser o tamanho do meu array, então quando adicionar um push no array, ele será percorrido pelo loop também.
 for (let n = 0; n < cores.length; n++) {
-  console.log(cores[n]);
+  console.log(cores[n]); 
 }
 */
 
 
 // loop for in
 // pega a CHAVE dos itens do array
-// uma hora, i vai ser [0], no outro loop será [1] e assim por diante
+// no primeiro loop, i vai ser [0], no outro loop será [1] e assim por diante
 for (let i in cores) {
   console.log(cores[i]);
 }
