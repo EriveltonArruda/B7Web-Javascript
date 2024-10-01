@@ -7,7 +7,8 @@ function maiorDeIdade(idade) {
   }
 }
 
-// Outra forma de chamar a função, passando a variável que contém o valor, como parâmetro da função
+// Outra forma de chamar a função
+// passando a variável que contém o valor como parâmetro da função
 let idade = 65;
 let verificacao = maiorDeIdade(idade);
 

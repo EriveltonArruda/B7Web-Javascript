@@ -4,7 +4,9 @@ x = x + 8; // funciona com + - * / (qualquer operação básica)
 
 console.log(x);
 
-// Porém dessa forma acima só funciona com números, se fizer essa soma entre um número e uma string, o javascript concatenará (juntará) os valores e não fará a operação.
+// Porém dessa forma acima só funciona com números 
+// se fizer essa soma entre um número e uma string
+// o javascript concatenará (juntará) os valores e não fará a operação.
 /*
 let x = "2";
 x = x + 8;
@@ -47,7 +49,8 @@ console.log(n1 + n2);
 */
 
 // Operação dentro de uma variável //
-/*let n1 = 15;
+/*
+let n1 = 15;
 let n2 = 20;
 
 let soma = n1 + n2;

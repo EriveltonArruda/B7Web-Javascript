@@ -13,7 +13,7 @@ console.log(soma);
 console.log(nome);
 */
 
-// Typeof
+
 let nome = "Erivelton"; // String
 let idade = 45.5; // Number
 let logado = true; // Boolean
@@ -21,6 +21,7 @@ let lista = ["ovo", "farinha de trigo", "manteiga", 10]; // Array
 // quando for declarar variável composta, utilize camelCase, nunca use espaço ou caracteres especiais.
 let nomeCompleto = { nome: "Erivelton", idade: 32 }; // Objeto
 
+// Typeof mostra o tipo da variável
 console.log(typeof nome);
 console.log(typeof idade);
 console.log(typeof logado);

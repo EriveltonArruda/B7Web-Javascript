@@ -5,7 +5,7 @@ let shipping = isMember ? 2 : 10;
 
 // posso usar condicional ternário dentro do console.log
 console.log(isMember ? "Você é membro" : "Você NÂO é membro");
-console.log(`Frete: ${shipping}`);
+console.log(`Frete: ${ shipping }`);
 
 // Exemplo de idade
 let age = 90;

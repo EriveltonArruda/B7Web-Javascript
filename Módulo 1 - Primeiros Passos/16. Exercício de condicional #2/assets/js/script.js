@@ -21,7 +21,6 @@ console.log(a != b);
 
 // 4. Crie uma condicional para verificar se o preço da
 // carne está barato ou caro. PS: Até 45 está barato.
-// let preco = 40.3;
 let preco = 40.3;
 
 if (preco <= 45) {
