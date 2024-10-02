@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  margin-top: 20px;
+}
+
+.container {
+  width: 400px;
+  height: 500px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 20px 60px;
+  border-radius: 10px;
+}
+
+.header {
+  margin-bottom: 15px;
+}
+
+.header h1 {
+  color: #00ff;
+  font-size: 20px;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 13px;
+}
+
+.box input {
+  width: 250px;
+  height: 50px;
+}
+
+.button button {
+  width: 250px;
+  height: 40px;
+  background-color: #00ff;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.resultado {
+  display: flex;
+  gap: 5px;
+  margin: 20px 0;
+  font-size: 20px;
+}
+
+.result {
+  color: #00ff;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.table {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  background-color: #00ff;
+  color: #fff;
+}
+
+.made {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.made a {
+  color: #fff;
+  text-decoration: none;
+}

@@ -7,6 +7,60 @@
     <title>Calculadora de IMC</title>
   </head>
   <body>
+    <div class="container">
+      <div class="header">
+        <h1>Calculadora de IMC</h1>
+      </div>
+      <div class="box">
+        <input type="text" placeholder="Digite aqui sua altura em metros" />
+        <input type="text" placeholder="Digite aqui seu peso em kg" />
+      </div>
+      <div class="button">
+        <button>Calcular</button>
+      </div>
+      <div class="resultado">
+        <p>Seu IMC é: <span class="result">25.47</span></p>
+      </div>
+      <table>
+        <thead>
+          <tr cols="span-2">
+            <th>IMC (kg/m²)</th>
+            <th>Clasificação</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Menor que 18,5</td>
+            <td>Magreza</td>
+          </tr>
+          <tr>
+            <td>18,5 a 24,9</td>
+            <td>Peso Normal</td>
+          </tr>
+          <tr>
+            <td>25 a 29,9</td>
+            <td>Sobrepeso</td>
+          </tr>
+          <tr>
+            <td>30 a 34,9</td>
+            <td>Obesidade Grau I</td>
+          </tr>
+          <tr>
+            <td>35 a 40</td>
+            <td>Obesidade Grau II</td>
+          </tr>
+          <tr>
+            <td>Maior que 40</td>
+            <td>Obesidade Grau III</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="made">
+      Desenvolvido por
+      <a href="https://github.com/EriveltonArruda"> Erivelton Arruda</a>
+    </p>
+
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
