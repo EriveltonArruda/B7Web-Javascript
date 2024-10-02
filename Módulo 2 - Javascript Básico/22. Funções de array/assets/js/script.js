@@ -1,6 +1,6 @@
-// Ver quantidade de itens no array com length
 let fruits = ["Maçã", "Uva", "Laranja", "Banana"];
 
+// Ver quantidade de itens no array com length
 console.log(fruits.length);
 
 // Adiciona item no final do array.

@@ -10,7 +10,10 @@ for (let n = 0; n < 15/ n++) {
   console.log(cores[n]); // Vai ter 11 undefined além dos itens do array
 }
 
-fazendo o mesmo que o loop acima, só que dessa vez, a condição vai ser o tamanho do meu array, então quando adicionar um push no array, ele será percorrido pelo loop também.
+fazendo o mesmo que o loop acima, só que dessa vez, 
+a condição vai ser o tamanho do meu array, 
+então quando adicionar um push no array, 
+ele será percorrido pelo loop também.
 for (let n = 0; n < cores.length; n++) {
   console.log(cores[n]); 
 }
@@ -19,7 +22,8 @@ for (let n = 0; n < cores.length; n++) {
 
 // loop for in
 // pega a CHAVE dos itens do array
-// no primeiro loop, i vai ser [0], no outro loop será [1] e assim por diante
+// no primeiro loop, i vai ser [0], 
+// no outro loop será [1] e assim por diante
 for (let i in cores) {
   console.log(cores[i]);
 }
@@ -41,10 +45,11 @@ let coresObj = [
   { nome: "vermelho", qt: 5 },
 ];
 
-/* Já que nesse loop, cor pega o valor do meu array e ele passa a ser o array 
-cores dentro do loop, então eu acesso igual acessaria um objeto (cor.nome, é o
-mesmo de acessar como cores.nome) */
+
 for (let cor of coresObj) {
+  /* Já que nesse loop, cor pega o valor do meu array e ele passa a ser o array 
+  cores dentro do loop, então eu acesso igual acessaria um objeto (cor.nome, é o
+  mesmo de acessar como cores.nome) */
   console.log(`Nome: ${ cor.nome } - Quantidade: ${ cor.qt }`);
 }
 

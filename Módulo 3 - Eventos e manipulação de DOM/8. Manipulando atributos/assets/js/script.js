@@ -1,21 +1,26 @@
 function clicou() {
   const input = document.querySelector(".input");
 
+  /*
   // consultando atributos
-  // console.log(input.getAttribute("placeholder"));
-  // console.log(input.getAttribute("type"));
+  console.log(input.getAttribute("placeholder"));
+  console.log(input.getAttribute("type"));
 
   // verificando se tem atributos
-  /*
+  
   if (input.hasAttribute("placeholder")) {
     console.log("Tem placeholder SIM");
   } else {
     console.log("Não tem placeholder...");
   }
-  */
+  
 
   // setando atributos
-  // input.setAttribute('placeholder', 'Placeholder alterado');
+  // Essa função tem 2 parâmetros
+  // 1º o atributo que quero alterar
+  // 2º o valor novo
+  input.setAttribute('placeholder', 'Placeholder alterado');
+  */
 
   // Exemplo de mostrar e ocultar a senha
   // Para manipular o botão, preciso selecionar ele antes

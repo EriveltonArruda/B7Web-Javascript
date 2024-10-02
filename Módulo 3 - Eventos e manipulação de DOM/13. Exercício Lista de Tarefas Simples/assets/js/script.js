@@ -4,14 +4,12 @@ ao digitar uma tarefa e der enter, ele vai pra a lista.
 o input precisa ficar vazio quando adicionar na lista.
 */
 
-// Selecionando o input
+// Selecionando o input e a lista
 const input = document.querySelector("input");
+const ul = document.querySelector("ul");
 
 // essa função está em um botão no HTML
 function addTarefa() {
-  // seleciono a lista
-  const ul = document.querySelector("ul");
-
   // crio o elemento
   let newLi = document.createElement("li");
   // o valor dele será passado pelo input

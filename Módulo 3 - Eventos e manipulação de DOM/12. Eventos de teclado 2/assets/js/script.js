@@ -2,8 +2,7 @@
 // pode colocar o nome que quiser, muita gente só coloca o (e)
 // Ele é um objeto
 function soltou(e) {
-
-  // code mostra em detalhes o que foi apertado (leftShift ou RightShift por exemplo)
+  // code mostra em detalhes o que foi apertado (leftShift ou rightShift por exemplo)
   console.log(e.code);
   // key mostra não distingue LeftShift de Shift por exemplo
   console.log(e.key);

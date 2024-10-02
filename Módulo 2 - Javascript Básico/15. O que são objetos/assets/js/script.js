@@ -7,11 +7,13 @@ let nomes = ["Erivelton", "Pedro"];
 
 // Objeto com características de um personagem de RPG
 let personagem = {
+  // Propriedade: valor
   nome: "Erivelton",
   idade: 32,
   País: "Brasil",
   // Array dentro de objetos
   olhos: ["Preto", "Azul"],
+  // Objeto Características
   caracteristicas: {
     // Não posso colocar caracteres especiais como "ç"
     forca: 20,
@@ -20,8 +22,8 @@ let personagem = {
   },
 };
 
-/* Para selecionar um item de um objeto digitamos o nome do objeto (propriedade) seguido da sua chave depois de um ponto(.) */
-console.log(`${personagem.nome} tem ${personagem.idade} anos`);
+// Para selecionar um item de um objeto digitamos o nome do objeto seguido da sua propriedade depois de um ponto(.)
+console.log(`${ personagem.nome } tem ${ personagem.idade } anos`);
 
 // Selecionando um objeto dentro de outro objeto
 console.log(personagem.caracteristicas.magia);

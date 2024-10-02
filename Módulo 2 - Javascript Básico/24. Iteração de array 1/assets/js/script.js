@@ -20,6 +20,9 @@ let bigFruits = fruits.filter((item) => {
 console.log(bigFruits);
 
 // Every()
+// Essa função faz uma verificação em todos os itens do array
+// Assim como o filter, é uma função que precisa de uma função dentro dela
+// e os valores padrão dos parâmetros são value, index e array.
 let ok = fruits.every((value) => {
   if (value.length > 3) {
     return true;
@@ -36,6 +39,9 @@ if (ok) {
 }
 
 // Some()
+// A função some tem os mesmos parâmetros e estrutura da função every
+// A diferença é que o some vai retornar true se algum item do array satisfazer a condição imposta
+// nesse caso: se os itens tiverem mais de 3 letras, basicamente funciona como um OU do if.
 let okSome = fruits.some((value) => {
   if (value.length > 3) {
     return true;
@@ -51,6 +57,9 @@ if (okSome) {
 }
 
 // includes()
+// é usada para verificar se determinado item existe dentro do array
+// estrutura do includes //
+// array.includes(dentro dos parênteses eu coloco o que quero procurar)
 if (fruits.includes("Uva")) {
   console.log("Tem uva sim!");
 } else {

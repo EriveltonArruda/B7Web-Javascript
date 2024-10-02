@@ -5,8 +5,8 @@ let pessoa = {
   idade: 32,
 };
 
-// Resultado: Nome Completo: Erivelton Rodrigues
-console.log(`Nome Completo: ${ pessoa.nome } ${ pessoa.sobrenome }`);
+
+console.log(`Nome Completo: ${ pessoa.nome } ${ pessoa.sobrenome }`);// Resultado: Nome Completo: Erivelton Rodrigues
 
 // Função dentro de objeto
 let pessoa2 = {
@@ -14,14 +14,15 @@ let pessoa2 = {
   sobrenome: "Rodrigues",
   idade: 32,
   nomeCompleto: function () {
-    // Chamando o item do próprio objeto, nesse caso nome e sobrenome, então vai  chamar o nome e o sobrenome DESTE (this) objeto, nesse caso é pessoa
+    // Chamando o item do próprio objeto, nesse caso nome e sobrenome, 
+    // então vai  chamar o nome e o sobrenome DESTE (this) objeto, nesse caso é pessoa.
     return `${ this.nome } ${ this.sobrenome }`;
   },
 };
 
 // Para chamar ele no console fazemos assim:
-/* Apesar dessa função estar dentro de um objeto, podemos usar a função 
-normalmente. */
+// Apesar dessa função estar dentro de um objeto, 
+// podemos usar a função normalmente.
 console.log(pessoa2.nomeCompleto()); // Resultado: Erivelton Rodrigues
 
 /* O this não funciona com arrow function

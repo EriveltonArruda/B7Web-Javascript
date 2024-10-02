@@ -1,4 +1,8 @@
+// Assim como no CSS, selecionamos um id com #
+// e classes com ponto .
+
 // Selecionando pelo ID
+// Preste atenção no nome Element, ele está no singular porque só vai pegar um ID.
 document.getElementById("#teste");
 
 // Selecionando pela classe
