@@ -8,7 +8,7 @@ document.getElementById("#teste");
 // Selecionando pela classe
 document.getElementsByClassName(".botao");
 
-// Forma mais aberta de selecionar
+////// Forma mais aberta de selecionar //////
 // Pelo ID
 document.querySelector("#teste");
 
@@ -18,5 +18,5 @@ document.querySelector(".botao");
 // Selecionando todos os elementos
 document.querySelectorAll("li");
 
-// Selecionando os elementos por cascata
+// Selecionando os elementos por camadas (em cascata)
 document.querySelectorAll("#teste ul li");

@@ -1,8 +1,6 @@
 function clicou() {
   const button = document.querySelector("button");
 
-  /*
-
   // classList retorna um array de classes que o elemento tem
   console.log(button.classList);
 
@@ -18,10 +16,9 @@ function clicou() {
     button.classList.remove("azul");
     button.classList.add("verde", "vermelho");
   } else {
-    button.classList.remove("verde", "vermelho")
+    button.classList.remove("verde", "vermelho");
     button.classList.add("azul");
   }
-*/
 
   // toggle troca as classes, se o elemento tiver, ele tira, se não tiver, ele remove.
   button.classList.toggle("verde");
