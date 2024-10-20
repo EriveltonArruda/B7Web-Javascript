@@ -1,9 +1,9 @@
-// Função para o onclick do HTML
+// FUNÇÃO PARA O ONCLICK DO HTML
 function clicou() {
   console.log("Clicou no Botão");
 }
 
-// Criação do evento de clique pelo DOM //
+// CRIAÇÃO DO EVENTO DE CLIQUE PELO DOM //
 
 // para definir um evento de clique no botão, seleciono o elemento antes
 let botao = document.querySelector(".botao");
@@ -16,16 +16,17 @@ let botao = document.querySelector(".botao");
 botao.addEventListener("click", clicou);
 
 // outra forma de usar o eventListener
-botao.addEventListener("click", function () {
+botao.addEventListener("click", function() {
   clicou();
 });
 
-// Arrow function
+// fazendo em Arrow function
 botao.addEventListener("click", () => {
   clicou();
 });
 
 // Caso não queira armazenar em uma variável, faça assim usando Arrow Function
+// Selecione o elemento e adicione o evento
 document.querySelector(".botao").addEventListener("click", () => {
   clicou();
 });
