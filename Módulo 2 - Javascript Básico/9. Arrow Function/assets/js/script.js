@@ -43,23 +43,22 @@ const sobrenome = (sob) => `Erivelton ${ sob }`;
 console.log(sobrenome("Rodrigues")); // Resultado: Erivelton Rodrigues
 
 // Formas de criar arrow functions //
-/*
+
 // Todas essas Arrow Function foram feitas com base nessa Função normal
 function sobrenome(sob) {
-  return `Erivelton ${sob}`;
+  return `Erivelton ${ sob }`;
 }
 
 // Formas de criar Arrow Function
-const sobrenome = sob => `Erivelton ${sob}`;
+const sobrenome = sob => `Erivelton ${ sob }`;
 
-const sobrenome = (sob) => `Erivelton ${sob}`;
+const sobrenome = (sob) => `Erivelton ${ sob }`;
 
 const sobrenome = (sob) => {
-  return `Erivelton ${sob}`;
+  return `Erivelton ${ sob }`;
 }
 
 const sobrenome = (sob) => {
-  let nomeCompleto = `Erivelton ${sob}`;
+  let nomeCompleto = `Erivelton ${ sob }`;
   return nomeCompleto;
 }
-*/

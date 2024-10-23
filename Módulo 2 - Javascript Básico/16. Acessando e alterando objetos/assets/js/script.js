@@ -11,10 +11,8 @@ let personagem = {
 };
 
 // Alteração de valor de objetos
-/*
 personagem.nome // Assim eu acesso
 personagem.nome = novo valor // Assim eu defino.
-*/
 
 personagem.nome = "Pedro";
 
@@ -23,7 +21,7 @@ console.log(personagem.nome);  // Resultado: Pedro;
 // Aumentando a força do personagem em + 5 pontos.
 personagem.caracteristicas.forca += 5;
 
-console.log(`Força: ${ personagem.caracteristicas.forca }`);// Resultado: Força: 25
+console.log(`Força: ${ personagem.caracteristicas.forca }`); // Resultado: Força: 25
 
 /* A função push é uma função somente de Array, 
 não de objetos, mas como a propriedade olhos é um array, 
@@ -32,7 +30,7 @@ personagem.olhos.push("Verde");
 
 console.log(personagem.olhos); // Resultado: 'Preto', 'azul', 'verde'
 
-// Arrays dentro de objetos
+// Arrays dentro de objetos //
 let personagemBens = {
   nome: "Erivelton",
   idade: 32,
@@ -46,7 +44,7 @@ let personagemBens = {
   ],
 };
 
-// Pegando os valores dos objetos que estão dentro do array carros
+// Pegando os valores dos objetos que estão dentro do array carros //
 
 /* Lembrando que carros é um array, por ser array eu não posso usar ponto 
 e preciso acessar a posição do primeiro objeto [0], em seguida como é um objeto, 

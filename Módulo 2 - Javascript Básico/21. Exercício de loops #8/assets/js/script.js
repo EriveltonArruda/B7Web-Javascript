@@ -1,5 +1,6 @@
 // 1. Faça um loop que mostre todas as frutas
 let fruits = ["Maçã", "Uva", "Banana"];
+
 for (let fruit of fruits) {
   console.log(fruit);
 }

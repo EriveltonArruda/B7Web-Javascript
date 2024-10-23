@@ -12,7 +12,6 @@ for (let n = 0; n < 10; n++) {
 }
 
 // Exemplo da lista de produtos
-// digamos que tenho 15 produtos
 for (let n = 0; n < 15; n++) {
   console.log(`Produto ${ n }`);
 }

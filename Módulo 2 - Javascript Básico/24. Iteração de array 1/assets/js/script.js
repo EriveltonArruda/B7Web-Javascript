@@ -1,14 +1,16 @@
 let fruits = ["Banana", "Laranja", "Maçã", "Pera", "Uva"];
 
-// Filter()
+// Filter() //
 /*
-A função do filter tem 3 valores padrões, eles não precisam ser usados os 3 
+A função filter() basicamente faz um filtro dentro do array utilizado.
+Ela tem 3 valores padrões, eles não precisam ser usados os 3
 obrigatoriamente e não precisam obrigatoriamente ter esses nomes, são eles:
 value = valor do array;
 index = index do array;
 array = o array completo que será filtrado;
 */
 // Vou usar o value chamando ele de item
+// quero retornar no console apenas as frutas que tenham mais de 4 letras.
 let bigFruits = fruits.filter((item) => {
   if (item.length > 4) {
     return true;
@@ -41,7 +43,8 @@ if (ok) {
 // Some()
 // A função some tem os mesmos parâmetros e estrutura da função every
 // A diferença é que o some vai retornar true se algum item do array satisfazer a condição imposta
-// nesse caso: se os itens tiverem mais de 3 letras, basicamente funciona como um OU do if.
+// nesse caso: se os itens tiverem mais de 3 letras
+// basicamente funciona como um OU do if.
 let okSome = fruits.some((value) => {
   if (value.length > 3) {
     return true;
@@ -58,8 +61,6 @@ if (okSome) {
 
 // includes()
 // é usada para verificar se determinado item existe dentro do array
-// estrutura do includes //
-// array.includes(dentro dos parênteses eu coloco o que quero procurar)
 if (fruits.includes("Uva")) {
   console.log("Tem uva sim!");
 } else {

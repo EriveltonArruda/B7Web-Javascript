@@ -43,7 +43,7 @@ cars.sort((a, b) => {
 
 console.log(cars);
 
-// Explicação do que aconteceu com o sort(a, b)
+// Explicação do que aconteceu com o sort(a, b) //
 /* Na primeira execução do sort, o parâmetro "a" agora é fiat, ano 2022 e "b" é bmw, ano 2018, então a comparação é feita:
 2022 é maior que 2018? Sim, então vai retornar 1, ou seja, fiat desce e bmw sobe */
 

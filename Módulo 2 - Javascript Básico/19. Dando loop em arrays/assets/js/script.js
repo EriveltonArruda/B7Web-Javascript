@@ -2,22 +2,25 @@ let cores = ['preto', 'branco', 'azul', 'vermelho'];
 cores.push('verde');
 
 /*
-/* o [n] do lado de cores dentro do console.log vai pegar a chave do array, 
+o [n] do lado de cores dentro do console.log vai pegar a chave do array, 
 então na primeira execução n vai ser [0] e seu valor será preto, 
-na segunda execução n será [1], então ele será branco e assim sucessivamente.
+na segunda execução n será [1], seu valor será branco e assim sucessivamente.
+*/
 
-for (let n = 0; n < 15/ n++) {
+for (let n = 0; n < 15; n++) {
   console.log(cores[n]); // Vai ter 11 undefined além dos itens do array
 }
 
+/*
 fazendo o mesmo que o loop acima, só que dessa vez, 
 a condição vai ser o tamanho do meu array, 
 então quando adicionar um push no array, 
 ele será percorrido pelo loop também.
-for (let n = 0; n < cores.length; n++) {
-  console.log(cores[n]); 
-}
 */
+for (let n = 0; n < cores.length; n++) {
+  console.log(cores[n]);
+}
+
 
 
 // loop for in
@@ -47,9 +50,11 @@ let coresObj = [
 
 
 for (let cor of coresObj) {
-  /* Já que nesse loop, cor pega o valor do meu array e ele passa a ser o array 
-  cores dentro do loop, então eu acesso igual acessaria um objeto (cor.nome, é o
-  mesmo de acessar como cores.nome) */
+  /* Já que nesse loop, cor pega o valor do meu array 
+  e ele passa a ser o array cores dentro do loop, 
+  então eu acesso igual acessaria um objeto 
+  (cor.nome, é o mesmo de acessar como coresObj.nome) 
+  */
   console.log(`Nome: ${ cor.nome } - Quantidade: ${ cor.qt }`);
 }
 
