@@ -18,7 +18,7 @@ function clicou() {
   // append não interpreta como HTML, mas sim como texto.
   ul.children[0].append("<li>Item adicionado</li>");
 
-  // appendChild e CreateElement //
+  // appendChild e createElement //
   // appendChild adiciona um elemento e não um texto como o append
   // Criando o elemento na memória com o creteElement
   let newLi = document.createElement("li");

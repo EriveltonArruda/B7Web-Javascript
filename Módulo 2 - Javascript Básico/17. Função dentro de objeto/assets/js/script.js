@@ -15,7 +15,7 @@ let pessoa2 = {
   idade: 32,
   nomeCompleto: function () {
     // Chamando o item do próprio objeto, nesse caso nome e sobrenome, 
-    // então vai  chamar o nome e o sobrenome DESTE (this) objeto, nesse caso é pessoa.
+    // Vai  chamar o nome e o sobrenome DESTE (this) objeto, nesse caso é pessoa2.
     return `${ this.nome } ${ this.sobrenome }`;
   },
 };

@@ -15,7 +15,8 @@ console.log(colors[0]);
 // Array de Números
 let idades = [10, 20, 30]
 
-// Array de string e números
+// Array aceita vários TIPOS de dados
+// Array de string, números e boolean
 let lista = ["algo", 30, "blablabla", true];
 
 // Criando um array de nomes e colocando esse array dentro de outro array
@@ -32,14 +33,14 @@ let lista2 = ["blablabla", ["xx", "yy"]];
 dentro do array principal de lista, quem é o array que contém o xx? 
 é a posição [1], depois de selecionar a posição onde o array está, 
 eu tenho acesso aos valores daquele array específico, 
-então agora qual a posição de xx nesse array? é aposição [0].
+então agora qual a posição de xx nesse array? é a posição [0].
 */
 console.log(lista2[1][0]);
 
 // Também posso fazer assim:
 /* A variável segundo agora é o array que contém os valores xx e yy de lista,
 ou seja: ["xx", "yy"] */
-let segundo = lista[1];
+let segundo = lista2[1];
 
 // Ao chamar a variável segundo e colocar a posição [0], eu pego o valor xx
 console.log(segundo[0]); // Resultado: xx

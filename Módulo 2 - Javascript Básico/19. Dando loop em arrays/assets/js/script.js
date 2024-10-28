@@ -21,8 +21,6 @@ for (let n = 0; n < cores.length; n++) {
   console.log(cores[n]);
 }
 
-
-
 // loop for in
 // pega a CHAVE dos itens do array
 // no primeiro loop, i vai ser [0], 

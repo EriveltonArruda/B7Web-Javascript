@@ -33,9 +33,7 @@ function add() {
   count += 10;
 }
 
-// chamando a função uma vez, count será = 1;
 add();
-// chamando a função de novo, count agora será = 2;
 add();
 
 // Esse count é o do escopo global e o count que foi iterado foi o do escopo de bloco dentro da função

@@ -1,0 +1,1 @@
+Uma informação importante a respeito do querySelector, querySelectorAll, Elements e Element, é que o query selectorAll e o Elements sempre nos retorna um array com o elemento dentro, mesmo que esse elemento só tenha um item, já o querySelector e o Element só nos retorna o elemento diretamente.

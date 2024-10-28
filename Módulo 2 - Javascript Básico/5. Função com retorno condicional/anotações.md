@@ -1,0 +1,3 @@
+## Return em condicionais
+
+Note que a minha condição tem dois return, como dito antes, uma função só pode ter um return e tudo que vier depois dele será ignorado, contudo, no caso da condicional é um pouco diferente, nesse caso da condicional só existe um return de fato por assim dizer, isso porque se a condição for verdadeira, ele vai pra dentro do if, dentro de if tem algum código depois do return? Não, então o else não iria nem ser executado por conta da condição verdadeira, contudo, se a condição fosse falsa, ela iria entrar no else, como estamos no else, tem algum código depois do return? Não, então a função só tem um return, quem tem 2 returns por assim dizer é a condicional.

@@ -1,12 +1,9 @@
 // Função de exemplo para ser usada dentro de outra função
-
 function square(x) {
   return x * x;
 }
 
 console.log(square(2)); // Resultado: 4
-
-
 
 // Função que calcula as raízes de dois números
 function addSquares(a, b) {

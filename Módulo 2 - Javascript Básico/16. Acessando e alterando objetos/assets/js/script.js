@@ -11,9 +11,6 @@ let personagem = {
 };
 
 // Alteração de valor de objetos
-personagem.nome // Assim eu acesso
-personagem.nome = novo valor // Assim eu defino.
-
 personagem.nome = "Pedro";
 
 console.log(personagem.nome);  // Resultado: Pedro;
@@ -39,8 +36,8 @@ let personagemBens = {
   a vírgula de fora do objeto é a vírgula do array.
   Cada carro é um objeto e cada objeto duas propriedades */
   carros: [
-    { modelo: "Fiat", cor: "preto" },
-    { modelo: "Ferrari", cor: "Vermelho" },
+    { modelo: "Fiat", cor: "preto" }, // [0]
+    { modelo: "Ferrari", cor: "Vermelho" }, // [1]
   ],
 };
 

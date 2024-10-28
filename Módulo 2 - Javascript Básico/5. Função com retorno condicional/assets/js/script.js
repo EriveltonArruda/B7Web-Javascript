@@ -7,13 +7,20 @@ function maiorDeIdade(idade) {
   }
 }
 
+// Verificando a função
+let verificacaoMenor = maiorDeIdade(14);
+console.log(verificacaoMenor);
+
+let verificacaoMaior = maiorDeIdade(18);
+console.log(verificacaoMaior);
+
 // Outra forma de chamar a função
 // passando a variável que contém o valor como parâmetro da função
 let idade = 65;
 let verificacao = maiorDeIdade(idade);
 
 
-// Também posso fazer uma verificação da variável que tem a função como valor
+// Também posso fazer uma verificação da variável que tem a função
 if (verificacao) {
   console.log("É maior de idade");
 } else {
