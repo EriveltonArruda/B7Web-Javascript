@@ -7,11 +7,6 @@ function clicou() {
   // sem alterar o conteúdo original
   ul.children[0].append("(alterado)");
 
-  // innerHTML faz uma cópia do estado original
-  // e adiciona o conteúdo que você passou para essa cópia,
-  // ou seja, ele altera todo o conteúdo do elemento,
-  // o elemento sai da memória e é adicionado novamente com a adição.
-
   // NÂO é o mesmo de fazer isso
   ul.children[0].innerHTML += "(alterado)";
 
