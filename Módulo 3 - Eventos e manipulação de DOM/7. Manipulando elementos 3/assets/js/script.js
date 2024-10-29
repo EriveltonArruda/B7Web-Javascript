@@ -2,24 +2,21 @@ function clicou() {
   const teste = document.querySelector("#teste");
   const ul = teste.querySelector("ul");
 
-  /*
-   // adicionando texto depois do ul
-   ul.after("Texto qualquer");
- 
-   // Adicionando texto antes do elemento
-   ul.before("Texto qualquer");
- 
-   // não aceita elemento, apenas texto
-   ul.after("<button>Botão</button>");
- 
-  
-   // Criando um botão para usar o after ou o before nele
-   const newButton = document.createElement("button");
-   // Adicionando um texto ao botão criado
-   newButton.innerHTML = "Botão";
-   // Usando o botão antes do ul
-   ul.before(newButton);
-  */
+  // adiciona texto depois do elemento
+  ul.after("Texto qualquer");
+
+  // Adiciona texto antes do elemento
+  ul.before("Texto qualquer");
+
+  // não aceita elemento, apenas texto
+  ul.after("<button>Botão</button>");
+
+  // Criando um botão para usar o after ou o before nele
+  const newButton = document.createElement("button");
+  // Adicionando um texto ao botão criado
+  newButton.innerHTML = "Botão";
+  // Usando o botão antes do ul
+  ul.before(newButton);
 
   // Criando uma lista com DOM
   let newUl = document.createElement("ul");
@@ -40,7 +37,4 @@ function clicou() {
 
   // Essa lista será adicionada depois do ul existente
   ul.after(newUl);
-
-
 }
-
