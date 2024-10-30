@@ -4,13 +4,13 @@ function clicou() {
   // classList retorna um array de classes que o elemento tem
   console.log(button.classList);
 
-  // add nova classe (quantas quiser)
+  // adiciona nova classe (quantas quiser)
   button.classList.add("verde", "vermelho");
 
   // Para remover
   button.classList.remove("azul");
 
-  // // verifica se o elemento contém a classe do parâmetro
+  // verifica se o elemento contém a classe do parâmetro
   if (button.classList.contains("azul")) {
     // esse código é para exemplificar, basicamente fazer uma troca de classes
     button.classList.remove("azul");
