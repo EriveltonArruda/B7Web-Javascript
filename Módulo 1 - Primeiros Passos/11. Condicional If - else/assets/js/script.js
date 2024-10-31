@@ -16,13 +16,14 @@ if (idade >= 18) {
 // Comparação em if
 let idade = 14;
 
-// se usa dois sinais de igual para comparar se os valores são iguais, não se usa um igual (=) porque esse é um sinal de atribuição de valor à variável.
+// se usa dois sinais de igual para comparar se os valores são iguais, 
+// não se usa um igual (=) porque esse é um sinal de atribuição de valor à variável.
 if (idade == 18) {
   console.log(
-    `Maior de idade é quem tem 18 anos, sua idade é: ${idade}, então você é MAIOR de Idade`
+    `Maior de idade é quem tem 18 anos, sua idade é: ${ idade }, então você é MAIOR de Idade`
   );
 } else {
   console.log(
-    `Maior de idade é quem tem 18 anos, sua idade é: ${idade}, então você é MENOR de Idade`
+    `Maior de idade é quem tem 18 anos, sua idade é: ${ idade }, então você é MENOR de Idade`
   );
 }
