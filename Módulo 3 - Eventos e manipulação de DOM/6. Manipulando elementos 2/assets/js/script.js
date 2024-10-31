@@ -15,7 +15,7 @@ function clicou() {
 
   // appendChild e createElement //
   // appendChild adiciona um elemento e não um texto como o append
-  // Criando o elemento na memória com o creteElement
+  // Criando o elemento na memória com o createElement
   let newLi = document.createElement("li");
   // Adicionando um texto nesse elemento criado
   newLi.innerText = "Item adicionado";
