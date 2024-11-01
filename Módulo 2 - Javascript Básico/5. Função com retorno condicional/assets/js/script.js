@@ -1,5 +1,5 @@
-// Podemos usar condições dentro de funções
 function maiorDeIdade(idade) {
+  // Podemos usar condições dentro de funções
   if (idade >= 18) {
     return true;
   } else {

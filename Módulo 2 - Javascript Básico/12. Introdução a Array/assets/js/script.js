@@ -1,8 +1,4 @@
-// Estrutura de um array
-/* crio uma variável normalmente, só que a diferença é que em vez de colocar um valor só, 
-eu coloco um colchete, assim a variável será um array, 
-dentro desse colchete fica a lista de variáveis, 
-todas são separadas por vírgula. */
+// Criando Array
 let colors = ["blue", "red", "green"];
 
 console.log(colors);

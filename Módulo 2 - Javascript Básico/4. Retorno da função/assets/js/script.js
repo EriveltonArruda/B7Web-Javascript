@@ -1,5 +1,5 @@
-// Retorno da função, toda função precisa retornar algo
 function nomeCompleto(nome, sobrenome) {
+  // Retorno da função, toda função precisa retornar algo
   return `${ nome } ${ sobrenome }`;
 }
 

@@ -15,5 +15,3 @@ while (numero < 10) {
 for (let numero = 0; numero < 10; numero++) {
   console.log(`O número da vez é ${ numero }`);
 }
-
-// while é mais utilizado quando precisamos lidar com servidores e precisamos que o loop fique rodando eternamente.

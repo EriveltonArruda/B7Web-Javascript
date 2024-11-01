@@ -3,15 +3,15 @@ let fruits = ["Banana", "Laranja", "Maçã", "Pera", "Uva"];
 // Filter() //
 /*
 A função filter() basicamente faz um filtro dentro do array utilizado.
-Ela tem 3 valores padrões, eles não precisam ser usados os 3
-obrigatoriamente e não precisam obrigatoriamente ter esses nomes, são eles:
+Ela tem 3 valores padrões, eles não precisam ser usados os 3 obrigatoriamente
+e não precisam obrigatoriamente ter esses nomes, são eles:
 value = valor do array;
 index = index do array;
 array = o array completo que será filtrado;
 */
 // Vou usar o value chamando ele de item
-// quero retornar no console apenas as frutas que tenham mais de 4 letras.
 let bigFruits = fruits.filter((item) => {
+  // quero retornar no console apenas as frutas que tenham mais de 4 letras.
   if (item.length > 4) {
     return true;
   } else {
