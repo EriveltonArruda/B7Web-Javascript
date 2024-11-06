@@ -1,8 +1,9 @@
 ## Classes
 
-Classes são os modelos que serão usados para criar o objeto baseado neles, são basicamente modelos.
+Classes são os modelos que serão usados para criar o objeto baseado neles.
+É um conceito, não funciona sem antes criar o objeto.
 
-Dentro de toda classe e objeto, trabalhamos com propriedades e métodos/ações, todo objeto terá características e ações que ele pode executar.
+Dentro de toda classe trabalhamos com propriedades e métodos/ações, todo objeto terá características e ações que ele pode executar.
 
 ## Construtor
 
@@ -20,7 +21,7 @@ No objeto Maria, o this se refere à Maria
 No objeto Pedro, o this se refere à Pedro
 ```
 
-No construtor da classe pessoa temos name e age, então quando criarmos o objeto joão, o this será dessa forma:
+Exemplo: no construtor da classe pessoa temos name e age, então quando criarmos o objeto joão, o this será basicamente isso:
 
 ```
 this.name
