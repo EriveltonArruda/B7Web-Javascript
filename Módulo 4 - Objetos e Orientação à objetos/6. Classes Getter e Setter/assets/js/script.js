@@ -2,15 +2,10 @@ class Person {
   // Geralmente se coloca underline antes da variável
   // quando estamos trabalhando com get e set
   _age = 0;
-  steps = 0;
 
   constructor (firstName, lastName) {
     this.firstName = firstName;
     this.lastName = lastName;
-  }
-
-  takeAStep() {
-    this.steps++;
   }
 
   // usamos get para combinar variáveis também
