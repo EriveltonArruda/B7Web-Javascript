@@ -17,4 +17,4 @@ innerText interpreta tudo como texto e não interpreta tag de HTML
 
 ## OuterHTML
 
-Existe também o outerHTML, o princípio dele é o mesmo do inner, ele pega o html levando em conta o próprio elemento junto com o conteúdo interno;
+O princípio dele é o mesmo do inner, a diferença é que ele pega o html levando em conta o próprio elemento junto com o conteúdo interno;
