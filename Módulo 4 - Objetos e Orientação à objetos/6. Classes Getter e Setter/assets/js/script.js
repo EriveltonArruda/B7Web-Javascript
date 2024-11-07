@@ -38,3 +38,26 @@ p1.age = 20;
 // O age no template está executando a função age do get
 // Assim como o fullName está executando a função fullName do get
 console.log(`${ p1.fullName } tem ${ p1.age } anos.`);
+
+
+// Praticando
+class Car {
+  _color = "branca";
+
+  constructor (brand, model) {
+    this.brand = brand;
+    this.model = model;
+  }
+
+  get color() {
+    return this._color;
+  }
+
+  set color(x) {
+    this._color = x;
+  }
+}
+
+let car = new Car("Ferrari", "812 GTS");
+car.color = "vermelha";
+console.log(`Minha ${ car.brand } ${ car.model } tem a cor ${ car.color }`);
