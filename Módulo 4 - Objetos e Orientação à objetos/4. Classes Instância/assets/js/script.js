@@ -31,7 +31,7 @@ let personPedro = new PersonSemAge("Pedro");
 // Definindo uma idade para a idade do construtor
 personJoao.age = 20;
 
-// A idade ó será aplicada a joão
+// A idade só será aplicada a joão
 console.log(`${ personJoao.name } tem ${ personJoao.age } anos`);
 // os demais continuam com idade 0
 console.log(`${ personMaria.name } tem ${ personMaria.age } anos`);
