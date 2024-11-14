@@ -3,9 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Eventos e Manipulação de DOM</title>
+    <title>Projeto Luta</title>
+    <link rel="stylesheet" href="./assets/styles.css" />
   </head>
   <body>
+    <div class="fightarea">
+      <div id="char">
+        <div class="lifebar">
+          <div class="bar" style="width: 10%"></div>
+        </div>
+        <strong class="name">--</strong>
+        <div>
+          <button class="attackButton">Atacar</button>
+        </div>
+      </div>
+      <div id="monster">
+        <div class="lifebar">
+          <div class="bar" style="width: 10%"></div>
+        </div>
+        <strong class="name">--</strong>
+        <div>
+          <button class="attackButton">Atacar</button>
+        </div>
+      </div>
+    </div>
+
+    <ul class="log"></ul>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
