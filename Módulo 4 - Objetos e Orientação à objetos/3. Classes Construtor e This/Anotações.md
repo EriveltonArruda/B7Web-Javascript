@@ -9,9 +9,13 @@ Dentro de toda classe trabalhamos com propriedades e métodos/ações, todo obje
 
 É uma função que será executada sempre que um objeto for criado, no momento de criação do objeto essa função será a primeira a ser executada, ela contém as propriedades do objeto.
 
+É o método especial chamado automaticamente quando criamos um novo objeto de uma classe.
+
 ## this
 
 O this na orientação a objeto se refere a aquele objeto específico (ao próprio objeto que está sendo criado).
+
+Refere-se ao objeto atual (a instância da classe) e permite acessar ou definir as propriedades e métodos dela.
 
 Como foi criado o objeto pessoa, o this se refere ao próprio objeto, por exemplo:
 

@@ -36,6 +36,11 @@ console.log(`Oi eu sou ${ p1.name } e tenho ${ Person.hands } mãos`);
 class Bedroom {
   static quantity = 1;
 
+  // Incrementando
+  static incrementQuantity() {
+    this.quantity++;
+  }
+
   constructor (type) {
     this.type = type;
   }
@@ -47,3 +52,46 @@ console.log(`Minha cama é tipo ${ bed.type }, tenho ${ Bedroom.quantity } dela`
 
 Bedroom.quantity = 2;
 console.log(`Minha cama é tipo ${ bed.type }, agora tenho ${ Bedroom.quantity } dela`);
+
+// usando o incremento
+Bedroom.incrementQuantity();
+console.log(`Agora tenho ${ Bedroom.quantity } camas.`);
+
+/* 
+Prática extra para você tentar (GPT):
+Crie uma classe Garage com os seguintes requisitos:
+
+Uma propriedade estática totalCars, que começa em 0.
+Um método estático addCar() que aumenta totalCars.
+Um método de instância describe() que retorna o nome do carro guardado na garagem.
+Um construtor que aceita o nome do carro e armazena no atributo carName.
+*/
+class Garage {
+  static totalCars = 0;
+
+  // Método estático para adicionar carros
+  static addCar() {
+    this.totalCars++;
+  }
+
+  // Método de Instância para descrever o carro
+  describe() {
+    return `Essa garagem guarda um ${ this.carName }`;
+  }
+
+  // Construtor para definir o carro
+  constructor (carName) {
+    this.carName = carName;
+  }
+}
+
+
+let garage1 = new Garage("Ferrari");
+Garage.addCar();
+
+let garage2 = new Garage("Lamborghini");
+Garage.addCar();
+
+console.log(garage1.describe()); // "Esta garagem guarda um Ferrari."
+console.log(garage2.describe()); // "Esta garagem guarda um Lamborghini."
+console.log(Garage.totalCars); // Deve mostrar 2.

@@ -36,3 +36,39 @@ console.log(`${ personJoao.name } tem ${ personJoao.age } anos`);
 // os demais continuam com idade 0
 console.log(`${ personMaria.name } tem ${ personMaria.age } anos`);
 console.log(`${ personPedro.name } tem ${ personPedro.age } anos`);
+
+/* Desafio:
+Crie uma classe Car: A classe deve ter dois atributos no construtor: brand (marca do carro) e model (modelo do carro).
+
+Adicione um método getInfo(): Esse método vai retornar uma string que descreve o carro, por exemplo: "O carro é um [marca] [modelo].".
+
+Instancie alguns objetos dessa classe, com marcas e modelos diferentes, e utilize o método getInfo() para mostrar as informações desses carros.
+
+Adicione uma propriedade opcional chamada year (ano do carro), com valor padrão 2023. O ano pode ser alterado após a instância do objeto, caso necessário.
+*/
+
+class Car {
+  constructor (brand, model, year = 2023) {
+    this.brand = brand;
+    this.model = model;
+    this.year = year;
+  }
+
+  // Descrição do carro
+  getInfo() {
+    return `O carro é um ${ this.year } ${ this.brand } modelo ${ this.model }`;
+  }
+}
+
+// instanciando
+let car1 = new Car("Toyota", "Corolla");
+let car2 = new Car("Honda", "Civic");
+let car3 = new Car("Mitsubishi", "Eclipse");
+
+car1.year = 2024;
+car2.year = 2024;
+car3.year = 1991;
+
+console.log(car1.getInfo());
+console.log(car2.getInfo());
+console.log(car3.getInfo());
