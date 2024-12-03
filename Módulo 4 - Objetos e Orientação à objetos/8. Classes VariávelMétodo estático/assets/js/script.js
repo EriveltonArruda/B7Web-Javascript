@@ -32,7 +32,7 @@ p1.sayHello();
 // Funcionaria assim:
 Person.sayHello();
 
-// Exemplo usando o método estático hands
+// Outro exemplo:
 console.log(`Oi eu sou ${ p1.name } e tenho ${ Person.hands } mãos`);
 
 // Prática
