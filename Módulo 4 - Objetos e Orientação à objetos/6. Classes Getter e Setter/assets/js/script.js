@@ -35,8 +35,8 @@ let p3 = new Person("Pedro", "Duarte");
 // usando o set
 p1.age = 20;
 
-// O age no template está executando a função age do get
-// Assim como o fullName está executando a função fullName do get
+// O age no template está executando a função get age()
+// Assim como o fullName está executando a função get fullName()
 console.log(`${ p1.fullName } tem ${ p1.age } anos.`);
 
 

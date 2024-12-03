@@ -72,7 +72,7 @@ class Employee extends Person {
 
   introduce() {
     super.sayHi();
-    console.log(`Eu sou ${ this.position } e minha matrícula é #${ this.id }`)
+    this.sayHi();
   }
 }
 

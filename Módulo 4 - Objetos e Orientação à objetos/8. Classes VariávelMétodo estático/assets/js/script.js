@@ -29,7 +29,10 @@ p1.sayHi();
 // Não funciona porque o método é estático.
 // E objeto não tem acesso ao método estático, apenas a classe tem acesso
 p1.sayHello();
+// Funcionaria assim:
+Person.sayHello();
 
+// Exemplo usando o método estático hands
 console.log(`Oi eu sou ${ p1.name } e tenho ${ Person.hands } mãos`);
 
 // Prática
