@@ -1,10 +1,12 @@
 function clicou() {
   const input = document.querySelector(".input");
 
+  // getAttribute() //
   // Pega o valor do atributo do elemento
   console.log(input.getAttribute("placeholder"));
   console.log(input.getAttribute("type"));
 
+  // hasAttribute() //
   // verificando se tem atributos
   if (input.hasAttribute("placeholder")) {
     console.log("Tem placeholder SIM");
@@ -12,6 +14,7 @@ function clicou() {
     console.log("Não tem placeholder...");
   }
 
+  // setAttribute() //
   // Define o valor do atributo
   // Essa função tem 2 parâmetros
   // 1º o atributo que quero alterar

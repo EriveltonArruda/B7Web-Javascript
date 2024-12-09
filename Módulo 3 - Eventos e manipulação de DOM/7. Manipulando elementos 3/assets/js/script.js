@@ -28,7 +28,7 @@ function clicou() {
     // Adiciono o texto a ele (pode usar o append ou innerHTML também)
     // mas é bom só usar o innerHTML quando realmente 
     // precisar passar um elemento de HTML, caso contrário, use Text
-    newLi.innerText = `Item da lista nova ${i}`;
+    newLi.innerText = `Item da lista nova ${ i }`;
     // Se quiser que o item comece no 1 no lugar do 0, faça isso no for:
     // newLi.innerHTML = `Item da lista nova ${ i + 1 }`;
     // Adiciono esse li na lista nova

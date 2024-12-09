@@ -4,7 +4,6 @@ function clicou() {
 }
 
 // CRIAÇÃO DO EVENTO DE CLIQUE PELO DOM //
-
 // para definir um evento de clique no botão, seleciono o elemento antes
 let botao = document.querySelector(".botao");
 
@@ -16,7 +15,7 @@ let botao = document.querySelector(".botao");
 botao.addEventListener("click", clicou);
 
 // outra forma de usar o eventListener
-botao.addEventListener("click", function() {
+botao.addEventListener("click", function () {
   clicou();
 });
 
