@@ -4,7 +4,7 @@ function clicou() {
   // classList retorna um array de classes que o elemento tem
   console.log(button.classList);
 
-  // adiciona nova classe (quantas quiser)
+  // add() adiciona nova classe (quantas quiser)
   button.classList.add("verde", "vermelho");
 
   // Para remover
@@ -20,14 +20,13 @@ function clicou() {
     button.classList.add("azul");
   }
 
-  // toggle troca as classes, se o elemento tiver, ele tira, se não tiver, ele remove.
+  // toggle() troca as classes, se o elemento tiver, ele tira, se não tiver, ele remove.
   button.classList.toggle("verde");
 
-  // replace substitui a classe do primeiro parâmetro com a do segundo
+  // replace() substitui a classe do primeiro parâmetro com a do segundo
   button.classList.replace("azul", "vermelho");
 
-  // contains //
-  // refazendo o if, só que agora com replace e contains
+  // refazendo o if acima, só que agora com replace e contains
   if (button.classList.contains('azul')) {
     button.classList.replace('azul', 'verde');
   } else {

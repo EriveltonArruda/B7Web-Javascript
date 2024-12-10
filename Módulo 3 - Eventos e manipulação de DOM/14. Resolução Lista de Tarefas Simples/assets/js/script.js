@@ -1,6 +1,6 @@
-// vou precisar manipular o ul e o input
-// no input vou adicionar o evento
-// no ul vou adicionar os elementos
+/* vou precisar manipular o ul e o input
+no input vou adicionar o evento
+no ul vou adicionar os elementos */
 
 const input = document.querySelector("input");
 const lista = document.querySelector("ul");

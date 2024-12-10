@@ -7,7 +7,7 @@ function clicou() {
   console.log(input.getAttribute("type"));
 
   // hasAttribute() //
-  // verificando se tem atributos
+  // verifica se o elemento tem os atributos passados no parâmetro
   if (input.hasAttribute("placeholder")) {
     console.log("Tem placeholder SIM");
   } else {
@@ -15,10 +15,10 @@ function clicou() {
   }
 
   // setAttribute() //
-  // Define o valor do atributo
-  // Essa função tem 2 parâmetros
-  // 1º o atributo que quero alterar
-  // 2º o valor novo
+  /* Define o valor do atributo
+  Essa função tem 2 parâmetros
+  1º o atributo que quero alterar
+  2º o valor novo */
   input.setAttribute('placeholder', 'Placeholder alterado');
 
 

@@ -4,4 +4,4 @@ Quando trabalhamos com as classes dos elementos, utilizamos uma propriedade do e
 
 ## DOMTokenList
 
-é um array que mostra as classes que o elemento tem.
+é um array que mostra no console as classes que o elemento tem.
