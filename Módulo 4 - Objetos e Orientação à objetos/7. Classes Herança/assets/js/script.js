@@ -2,12 +2,12 @@
 class Person {
   age = 0;
 
-  constructor (name) {
+  constructor(name) {
     this.name = name;
   }
 
   sayHi() {
-    console.log(`${ this.name } diz Oi!`);
+    console.log(`${this.name} diz Oi!`);
   }
 }
 
@@ -16,15 +16,15 @@ class Person {
 class Student extends Person {
   // constructor da classe student
   // somente Student tem id, Person não tem
-  constructor (name, id) {
-    // name virá de Person
+  constructor(name, id) {
+    // name virá de Person, super está com parênteses porque está usando a função construtor
     super(name);
     this.id = id;
   }
 
   // Sobrescrevendo a função da classe pai
   sayHi() {
-    console.log(`${ this.name } é um estudante e diz olá`);
+    console.log(`${this.name} é um estudante e diz olá.`);
   }
 
   sayHello() {
@@ -34,18 +34,15 @@ class Student extends Person {
 }
 
 let p1 = new Student("Erivelton", 1);
-// como Student herda tudo de Person,
-// tenho acesso ao age
+// como Student herda tudo de Person, tenho acesso ao age, então posso modificar
 p1.age = 33;
-console.log(`${ p1.name } tem ${ p1.age } anos e matrícula: #${ p1.id }`);
+console.log(`${p1.name} tem ${p1.age} anos e matrícula: #${p1.id}`);
 
 p1.sayHi();
 p1.sayHello();
 
 /*
 Desafio: 
-Criar uma classe Employee (Funcionário)
-
 Crie uma classe Employee (Funcionário), que herda de Person (Pessoa).
 
 O Employee deve ter um atributo adicional chamado position (cargo), que não existe na classe Person.
@@ -60,19 +57,19 @@ Eu sou Programador e minha matrícula é #123.
 */
 
 class Employee extends Person {
-  constructor (name, position, id) {
+  constructor(name, position, id) {
     super(name);
     this.position = position;
     this.id = id;
   }
 
   sayHi() {
-    console.log(`Olá, meu nome é ${ this.name } e sou ${ this.position }`);
+    console.log(`Olá, meu nome é ${this.name} e sou ${this.position}.`);
   }
 
   introduce() {
     super.sayHi();
-    this.sayHi();
+    console.log(`Eu sou ${this.position} e minha matrícula é: #${this.id}`);
   }
 }
 

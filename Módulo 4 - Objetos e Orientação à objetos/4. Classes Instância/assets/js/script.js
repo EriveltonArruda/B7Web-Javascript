@@ -1,5 +1,5 @@
 class Person {
-  constructor (name, age) {
+  constructor(name, age) {
     this.name = name;
     this.age = age;
   }
@@ -10,15 +10,15 @@ let p1 = new Person("João", 20);
 let p2 = new Person("Maria", 30);
 let p3 = new Person("Pedro", 40);
 
-console.log(`${ p1.name } tem ${ p1.age } anos`);
-console.log(`${ p2.name } tem ${ p2.age } anos`);
-console.log(`${ p3.name } tem ${ p3.age } anos`);
+console.log(`${p1.name} tem ${p1.age} anos`);
+console.log(`${p2.name} tem ${p2.age} anos`);
+console.log(`${p3.name} tem ${p3.age} anos`);
 
 // Classe sem idade no construtor
 class PersonSemAge {
   // valor padrão da idade
   age = 0;
-  constructor (name) {
+  constructor(name) {
     this.name = name;
   }
 }
@@ -28,14 +28,14 @@ let personJoao = new PersonSemAge("João");
 let personMaria = new PersonSemAge("Maria");
 let personPedro = new PersonSemAge("Pedro");
 
-// Definindo uma idade para a idade do construtor
+/* Definindo um valor para a idade que está fora do construtor, age existe na classe, só não foi definida até agora (está = 0) */
 personJoao.age = 20;
 
 // A idade só será aplicada a joão
-console.log(`${ personJoao.name } tem ${ personJoao.age } anos`);
+console.log(`${personJoao.name} tem ${personJoao.age} anos`);
 // os demais continuam com idade 0
-console.log(`${ personMaria.name } tem ${ personMaria.age } anos`);
-console.log(`${ personPedro.name } tem ${ personPedro.age } anos`);
+console.log(`${personMaria.name} tem ${personMaria.age} anos`);
+console.log(`${personPedro.name} tem ${personPedro.age} anos`);
 
 /* Desafio:
 Crie uma classe Car: A classe deve ter dois atributos no construtor: brand (marca do carro) e model (modelo do carro).
@@ -48,7 +48,7 @@ Adicione uma propriedade opcional chamada year (ano do carro), com valor padrão
 */
 
 class Car {
-  constructor (brand, model, year = 2023) {
+  constructor(brand, model, year = 2023) {
     this.brand = brand;
     this.model = model;
     this.year = year;
@@ -56,7 +56,7 @@ class Car {
 
   // Descrição do carro
   getInfo() {
-    return `O carro é um ${ this.year } ${ this.brand } modelo ${ this.model }`;
+    return `O carro é um ${this.year} ${this.brand} modelo ${this.model}`;
   }
 }
 

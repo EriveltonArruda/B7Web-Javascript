@@ -1,16 +1,16 @@
-## Ordem dentro da classe
+## Ordem dentro da Classe
 
 ```
-Variáveis comuns a todos
+Variáveis comuns
 Construtor
 Ações que o objeto poderá fazer (funções/métodos)
 ```
 
-As funções dentro da classe (que também podem ser chamadas de métodos), não precisam ter o nome function antes delas quando forem criadas.
+As funções dentro da classe (que também podem ser chamadas de métodos) não precisam ter o nome function antes delas quando forem criadas.
 
 ## Explicação do takeAStep
 
-Como estamos lidando com uma classe e classe é um modelo, temos que usar o this, não podemos colocar "steps = steps +1" ou "steps++" dentro dessa função, precisamos referenciar com o this antes.
+Como estamos lidando com uma classe e classe é um modelo, temos que usar o this, não podemos colocar "steps = steps +1" ou "steps++" ou "steps =+1" dentro dessa função, precisamos referenciar com o this antes.
 
 ## Botão para contar os steps
 

@@ -3,15 +3,15 @@ class Person {
   static hands = 2;
   age = 0;
 
-  constructor (name) {
+  constructor(name) {
     this.name = name;
   }
 
   sayHi() {
     // Variável estática não funciona com this
-    console.log(`Oi eu sou ${ this.name } e tenho ${ this.hands } mãos`);
+    console.log(`Oi eu sou ${this.name} e tenho ${this.hands} mãos`);
     // funciona assim
-    console.log(`Oi eu sou ${ this.name } e tenho ${ Person.hands } mãos`);
+    console.log(`Oi eu sou ${this.name} e tenho ${Person.hands} mãos`);
   }
 
   // Método estático
@@ -26,14 +26,14 @@ let p1 = new Person("Erivelton");
 Person.hands = 3;
 
 p1.sayHi();
-// Não funciona porque o método é estático.
-// E objeto não tem acesso ao método estático, apenas a classe tem acesso
+// Não funciona porque o método é estático
+// e objeto não tem acesso ao método estático, apenas a classe tem acesso
 p1.sayHello();
 // Funcionaria assim:
 Person.sayHello();
 
 // Outro exemplo:
-console.log(`Oi eu sou ${ p1.name } e tenho ${ Person.hands } mãos`);
+console.log(`Oi eu sou ${p1.name} e tenho ${Person.hands} mãos`);
 
 // Prática
 class Bedroom {
@@ -44,21 +44,21 @@ class Bedroom {
     this.quantity++;
   }
 
-  constructor (type) {
+  constructor(type) {
     this.type = type;
   }
 }
 
 let bed = new Bedroom("King Size");
 
-console.log(`Minha cama é tipo ${ bed.type }, tenho ${ Bedroom.quantity } dela`);
+console.log(`Minha cama é tipo ${bed.type}, tenho ${Bedroom.quantity} dela`);
 
 Bedroom.quantity = 2;
-console.log(`Minha cama é tipo ${ bed.type }, agora tenho ${ Bedroom.quantity } dela`);
+console.log(`Minha cama é tipo ${bed.type}, agora tenho ${Bedroom.quantity} dela`);
 
 // usando o incremento
 Bedroom.incrementQuantity();
-console.log(`Agora tenho ${ Bedroom.quantity } camas.`);
+console.log(`Agora tenho ${Bedroom.quantity} camas.`);
 
 /* 
 Prática extra para você tentar (GPT):
@@ -79,11 +79,11 @@ class Garage {
 
   // Método de Instância para descrever o carro
   describe() {
-    return `Essa garagem guarda um ${ this.carName }`;
+    return `Essa garagem guarda um ${this.carName}`;
   }
 
   // Construtor para definir o carro
-  constructor (carName) {
+  constructor(carName) {
     this.carName = carName;
   }
 }

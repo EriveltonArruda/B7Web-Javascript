@@ -1,16 +1,16 @@
 class Person {
-  // Geralmente se coloca underline antes da variável
-  // quando estamos trabalhando com get e set
+  /* Geralmente se coloca underline antes da variável
+  quando estamos trabalhando com get e set */
   _age = 0;
 
-  constructor (firstName, lastName) {
+  constructor(firstName, lastName) {
     this.firstName = firstName;
     this.lastName = lastName;
   }
 
   // usamos get para combinar variáveis também
   get fullName() {
-    return `${ this.firstName } ${ this.lastName }`
+    return `${this.firstName} ${this.lastName}`
   }
 
   get age() {
@@ -22,8 +22,6 @@ class Person {
     // também podemos fazer a verificação
     if (typeof x == "number") {
       this._age = x;
-    } else {
-      console.log("Apenas Números!");
     }
   }
 }
@@ -35,16 +33,15 @@ let p3 = new Person("Pedro", "Duarte");
 // usando o set
 p1.age = 20;
 
-// O age no template está executando a função get age()
-// Assim como o fullName está executando a função get fullName()
-console.log(`${ p1.fullName } tem ${ p1.age } anos.`);
+/* O age no template está executando a função get age(), assim como o fullName está executando a função get fullName() */
+console.log(`${p1.fullName} tem ${p1.age} anos.`);
 
 
 // Praticando
 class Car {
   _color = "branca";
 
-  constructor (brand, model) {
+  constructor(brand, model) {
     this.brand = brand;
     this.model = model;
   }
@@ -60,4 +57,4 @@ class Car {
 
 let car = new Car("Ferrari", "812 GTS");
 car.color = "vermelha";
-console.log(`Minha ${ car.brand } ${ car.model } tem a cor ${ car.color }`);
+console.log(`Minha ${car.brand} ${car.model} tem a cor ${car.color}`);
