@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Batalha Pokémon</title>
+  <link rel="stylesheet" href="./assets/styles.css" />
+</head>
+
+<body>
+
+  <button onclick="game.toggleMusic()">Tocar/Pausar Música</button>
+  <div id="char">
+    <div class="left">
+      <img src="./assets/img/Charizard.png" alt="" class="charizard">
+    </div>
+    <div class="right">
+      <div class="lifebar">
+        <div class="bar" style="width: 10%"></div>
+      </div>
+      <strong class="name">--</strong>
+      <button class="attackButton">Atacar</button>
+    </div>
+  </div>
+  <div id="blas">
+    <div class="left">
+      <img src="./assets/img/Blastoise.jpeg" alt="" class="blastoise">
+    </div>
+    <div class="right">
+      <div class="lifebar">
+        <div class="bar" style="width: 10%"></div>
+      </div>
+      <strong class="name">--</strong>
+      <button class="attackButton">Atacar</button>
+    </div>
+  </div>
+
+  <section class="log-banner">
+    <div class="log-border">
+      <div class="log-content">
+        <ul class="log"></ul>
+      </div>
+    </div>
+  </section>
+  <audio id="background-music" src="./assets/pokemon-battle-music.mp3">
+  </audio>
+  <script src="./assets/js/classes.js"></script>
+  <script src="./assets/js/script.js"></script>
+</body>
+
+</html>

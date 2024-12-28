@@ -1,0 +1,103 @@
+body {
+  height: 480px;
+  width: 500px;
+  margin: auto;
+  margin-top: 20px;
+  background-image: url("./img/Mapa.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 700px 850px;
+}
+
+#char {
+  display: flex;
+  flex-direction: row-reverse; /* colocando o charizard na direita */
+  margin-bottom: 50px;
+  height: auto;
+  width: 600px;
+  gap: 100px;
+}
+
+#blas {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: auto;
+  width: 550px;
+  gap: 50px;
+  margin-bottom: -15px;
+}
+
+.left img {
+  max-width: 100%;
+  height: auto;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.right .lifebar {
+  width: 200px; /* Ajusta o tamanho da barra de vida */
+  margin-bottom: 10px;
+}
+
+.attackButton {
+  margin-top: 10px;
+  padding: 5px 15px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.lifebar {
+  display: flex;
+  height: 10px;
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+
+.lifebar .bar {
+  height: inherit;
+  background-color: green;
+  border-radius: 5px;
+}
+
+.log {
+  overflow-y: scroll;
+  color: #fff;
+  height: 180px;
+  width: 655px;
+  margin-bottom: 100px;
+}
+
+.log-banner {
+  height: 215px;
+  width: 700px;
+  background-color: #000;
+  border-radius: 15px;
+  margin-left: -100px;
+}
+
+.log-border {
+  height: 200px;
+  width: 680px;
+  position: relative;
+  top: 5px;
+  background-color: yellow;
+  border-radius: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.log-content {
+  height: 180px;
+  width: 650px;
+  border-radius: 15px;
+  position: relative;
+  top: 12px;
+  margin: 15px;
+  background-color: blue;
+}
