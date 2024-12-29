@@ -15,11 +15,13 @@ Em seguida vou criar o fator de ataque e o fator de defesa, esse é um fator ale
 
 ```
 let attackFactor = (Math.random() * 2).toFixed(2);
-    let defenseFactor = (Math.random() * 2).toFixed(2);
+let defenseFactor = (Math.random() * 2).toFixed(2);
 
-    let actualAttack = attacking.attack * attackFactor;
-    let actualDefense = attacked.defense * defenseFactor;
+let actualAttack = attacking.attack * attackFactor;
+let actualDefense = attacked.defense * defenseFactor;
 ```
+
+## if (actualAttack > actualDefense)
 
 Em seguida vou criar a verificação para saber se houve dano ou se defendeu, se actualAttack > actualDefense quer dizer que o ataque foi bem sucedido, caso contrário, foi defendido.
 
