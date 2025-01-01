@@ -93,7 +93,7 @@ const stage = {
   doAttack(attacking, attacked) {
     // Verificando se tem alguém vivo
     if (attacking.life <= 0 || attacked.life <= 0) {
-      console.log("Alguém está morto, não pode atacar");
+      log.addMessage("Alguém está morto, não pode atacar");
       return;
     }
 
@@ -110,11 +110,32 @@ const stage = {
       attacked.life -= actualAttack;
       // Verificação para a vida não ficar negativa.
       attacked.life = attacked.life < 0 ? 0 : attacked.life;
-      console.log(`${attacking.name} causou ${actualAttack.toFixed(2)} de dano em ${attacked.name}`)
+      log.addMessage(`${attacking.name} causou ${actualAttack.toFixed(2)} de dano em ${attacked.name}`)
     } else {
-      console.log(`${attacked.name} conseguiu defender`);
+      log.addMessage(`${attacked.name} conseguiu defender`);
     }
 
     this.update();
+  }
+}
+
+const log = {
+  list: [],
+  // função para adicionar as mensagens
+  addMessage(msg) {
+    // adicionando a mensagem no array
+    this.list.push(msg);
+    // renderizando na tela
+    this.render();
+  },
+
+  // função responsável para exibir no log da tela
+  render() {
+    const logEl = document.querySelector('.log');
+    logEl.innerHTML = '';
+
+    for (let i in this.list) {
+      logEl.innerHTML += `<li>${this.list[i]}</li>`;
+    }
   }
 }
