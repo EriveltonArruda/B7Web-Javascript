@@ -84,9 +84,23 @@ class Game {
   }
 
   toggleMusic() {
+    let soundOnIcon = document.querySelector(".soundOn");
+    let soundOffIcon = document.querySelector(".soundOff");
     if (this.music.paused) {
+      soundOnIcon.classList.add("opened");
+      soundOffIcon.classList.remove("opened");
+      /* Também funcionaria assim
+      soundOnIcon.style.display = "flex";
+      soundOffIcon.style.display = "none";
+      */
       this.playMusic(); // Inicia a música se estiver pausada
     } else {
+      soundOnIcon.classList.remove("opened");
+      soundOffIcon.classList.add("opened");
+      /* Também funcionaria assim
+      soundOnIcon.style.display = "none";
+      soundOffIcon.style.display = "flex";
+      */
       this.pauseMusic(); // Pausa a música se estiver tocando
     }
   }

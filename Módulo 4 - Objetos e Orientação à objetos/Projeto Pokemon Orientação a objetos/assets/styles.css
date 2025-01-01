@@ -1,21 +1,41 @@
 body {
-  height: 480px;
-  width: 500px;
+  height: 30rem;
+  width: 31.25rem;
   margin: auto;
-  margin-top: 20px;
+  margin-top: 1.25rem;
   background-image: url("./img/Mapa.jpeg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 700px 850px;
+  background-size: 43.75rem 53.12rem;
+}
+
+.soundOn {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.soundOff {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.opened {
+  display: none;
 }
 
 #char {
   display: flex;
   flex-direction: row-reverse; /* colocando o charizard na direita */
-  margin-bottom: 50px;
+  margin-bottom: 3.125rem;
   height: auto;
-  width: 600px;
-  gap: 100px;
+  width: 37.5rem;
+  gap: 6.25rem;
 }
 
 #blas {
@@ -23,9 +43,9 @@ body {
   align-items: center;
   justify-content: space-between;
   height: auto;
-  width: 550px;
-  gap: 50px;
-  margin-bottom: -15px;
+  width: 34.37rem;
+  gap: 3.12rem;
+  margin-bottom: -0.94rem;
 }
 
 .left img {
@@ -41,63 +61,83 @@ body {
 }
 
 .right .lifebar {
-  width: 200px; /* Ajusta o tamanho da barra de vida */
-  margin-bottom: 10px;
+  width: 12.5rem; /* Ajusta o tamanho da barra de vida */
+  margin-bottom: 0.62rem;
 }
 
 .attackButton {
-  margin-top: 10px;
-  padding: 5px 15px;
-  font-size: 14px;
+  margin-top: 0.62rem;
+  padding: 0.31rem 0.94rem;
+  font-size: 0.88rem;
   cursor: pointer;
 }
 
 .lifebar {
   display: flex;
-  height: 10px;
+  height: 0.62rem;
   border: 1px solid #333;
-  border-radius: 5px;
+  border-radius: 0.31rem;
 }
 
 .lifebar .bar {
   height: inherit;
   background-color: green;
-  border-radius: 5px;
+  border-radius: 0.31rem;
 }
 
 .log {
   overflow-y: scroll;
   color: #fff;
-  height: 180px;
-  width: 655px;
+  height: 11.25rem;
+  width: 40.94rem;
   margin-bottom: 100px;
 }
 
 .log-banner {
-  height: 215px;
-  width: 700px;
+  height: 13.43rem;
+  width: 43.75rem;
   background-color: #000;
-  border-radius: 15px;
-  margin-left: -100px;
+  border-radius: 0.94rem;
+  margin-left: -6.25rem;
 }
 
 .log-border {
-  height: 200px;
-  width: 680px;
+  height: 12.5rem;
+  width: 42.5rem;
   position: relative;
-  top: 5px;
+  top: 0.31rem;
   background-color: yellow;
-  border-radius: 15px;
-  margin-left: 10px;
-  margin-right: 10px;
+  border-radius: 0.94rem;
+  margin-left: 0.62rem;
+  margin-right: 0.62rem;
 }
 
 .log-content {
-  height: 180px;
-  width: 650px;
-  border-radius: 15px;
+  height: 11.25rem;
+  width: 40.63rem;
+  border-radius: 0.94rem;
   position: relative;
-  top: 12px;
-  margin: 15px;
+  top: 0.75rem;
+  margin: 0.94rem;
   background-color: blue;
+}
+
+@media (width > 250px < 775px) {
+  body {
+    width: 100%;
+    margin: 0;
+    background-size: cover;
+  }
+
+  .log {
+    width: 100%;
+  }
+
+  .log-banner,
+  .log-border,
+  .log-content {
+    width: auto;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }

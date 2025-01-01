@@ -16,4 +16,4 @@ const stage = new Stage(
 stage.start();
 
 const game = new Game();
-game.playMusic();
+// game.playMusic();
