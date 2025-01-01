@@ -7,7 +7,7 @@ const defaultUser = {
 
 // Usando Herança para criar um usuário padrão.
 const user1 = {
-  // Referencio o pai para clonar as propriedades do pai
+  // Referencio o pai para clonar as propriedades
   ...defaultUser,
   // Substituindo as propriedades do pai.
   name: "Erivelton",
