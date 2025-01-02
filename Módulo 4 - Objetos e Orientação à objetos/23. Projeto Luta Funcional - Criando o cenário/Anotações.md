@@ -2,8 +2,8 @@
 
 Esses são os pontos que o stage precisa ter para começar o jogo:
 
-* O lutador 1 e o 2.
-* Onde está o elemento do lutador 1 e 2
+- O lutador 1 e o 2.
+- Os elementos dos lutadores 1 e 2.
 
 Dentro do objeto stage eu vou ter uma função chamada start(), ela ficará responsável por iniciar o jogo, é basicamente o construtor desse objeto.
 

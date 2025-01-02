@@ -1,6 +1,6 @@
 ## O que é?
 
-É quando utilizamos o conceito de orientação a objetos, só que feitos com funções que se comunicam entre si para gerar objetos.
+É quando utilizamos o conceito de orientação a objetos, só que feito com funções que se comunicam entre si para gerar objetos.
 
 O conceito de orientação a objetos pode ser declarado com classes, funções e etc.
 
