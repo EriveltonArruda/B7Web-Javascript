@@ -6,7 +6,7 @@ Dessa forma, quando a variável nomeCompleto for executada, as variáveis anteri
 
 ## Assíncrono
 
-Na execução assíncrona, não existe espera, ainda no exemplo de nome, sobrenome e nomeCompleto as 3 variáveis seriam executadas ao mesmo tempo, como nomeCompleto precisa que nome e sobrenome sejam executados antes, retornará um erro de variável não definida porque nome e sobrenome ainda não existem porque foram executadas ao mesmo tempo.
+Na execução assíncrona, não existe espera, ainda no exemplo de name, lastName e fullName as 3 variáveis seriam executadas ao mesmo tempo, como fullName precisa que name e lastName sejam executados antes, retornará um erro de variável não definida em fullName porque name e lastName ainda não existem porque foram executadas ao mesmo tempo.
 
 ## Onde usar cada um?
 
