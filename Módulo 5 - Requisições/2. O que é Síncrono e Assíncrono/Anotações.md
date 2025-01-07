@@ -1,12 +1,12 @@
 ## Síncrono
 
-Na forma síncrona, a ordem de execução é esperar pelo código anterior, no exemplo do nome e sobrenome o código de nome será executado primeiro e o sobrenome ficará esperando essa execução terminar para poder ser executado.
+Na execução síncrona, a ordem de execução é esperar pelo código anterior, no exemplo do nome e sobrenome o código de nome será executado primeiro e o sobrenome ficará esperando essa execução terminar para poder ser executado.
 
 Dessa forma, quando a variável nomeCompleto for executada, as variáveis anteriores a ela já terão sido executadas e terão um valor.
 
 ## Assíncrono
 
-Na execução assíncrona, não existe espera, ainda no exemplo de name, lastName e fullName as 3 variáveis seriam executadas ao mesmo tempo, como fullName precisa que name e lastName sejam executados antes, retornará um erro de variável não definida em fullName porque name e lastName ainda não existem porque foram executadas ao mesmo tempo.
+Na execução assíncrona, não existe espera, no exemplo de name, lastName e fullName as 3 variáveis seriam executadas ao mesmo tempo, como fullName precisa que name e lastName sejam executados antes, retornará um erro de variável não definida em fullName porque name e lastName ainda não existem pois foram executadas ao mesmo tempo.
 
 ## Onde usar cada um?
 
