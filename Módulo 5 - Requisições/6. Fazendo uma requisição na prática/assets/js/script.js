@@ -5,7 +5,14 @@ function clicou() {
     }).then((response) => { // Dados convertidos (muita gente chama de json, mas vou deixar como response).
       alert(`Título do primeiro post: ${ response[0].title }`);
     })
-}
+};
+
+// também funciona assim, se quiser resumir a arrow function do then 
+function clicouResumida() {
+  fetch('https://jsonplaceholder.typicode.com/posts')
+    .then(response => response.json())
+    .then(response => alert(`Título do primeiro post: ${ response[0].title }`));
+};
 
 document.querySelector("#botao").addEventListener("click", clicou);
 
@@ -15,4 +22,4 @@ document.querySelector("#button").addEventListener("click", () => {
     console.log(data); // Dados da resposta (muita gente chama de response)
     console.log(data.body); // retorna ReadableStream (dados sem conversão).
   })
-})
+});
