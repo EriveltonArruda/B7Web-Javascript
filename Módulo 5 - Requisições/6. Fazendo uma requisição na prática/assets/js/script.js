@@ -7,7 +7,7 @@ function clicou() {
     })
 };
 
-// também funciona assim, se quiser resumir a arrow function do then 
+// também funciona assim, caso queira resumir a arrow function do then 
 function clicouResumida() {
   fetch('https://jsonplaceholder.typicode.com/posts')
     .then(response => response.json())
@@ -16,7 +16,7 @@ function clicouResumida() {
 
 document.querySelector("#botao").addEventListener("click", clicou);
 
-// Exemplos usados na aula antes de converter para json
+// Exemplo usado na aula antes de converter para json
 document.querySelector("#button").addEventListener("click", () => {
   fetch('https://jsonplaceholder.typicode.com/posts').then((data) => {
     console.log(data); // Dados da resposta (muita gente chama de response)

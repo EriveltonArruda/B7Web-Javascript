@@ -1,6 +1,6 @@
 ## O que será feito na função clicou?
 
-Ao clicar no botão, quero fazer uma requisição para a URL que mostra os posts, vou pegar essa resposta e exibir a resposta em algum lugar.
+Ao clicar no botão, quero fazer uma requisição para a URL que mostra os posts, em seguida quero pegar essa resposta e exibir ela em algum lugar.
 
 ## funções fetch() e then()
 
@@ -15,8 +15,8 @@ A resposta vai ser passada no primeiro parâmetro do then() e nesse exemplo ser�
 
 Quando recebemos a resposta da requisição, precisamos usar uma função para converter essa resposta em um objeto porque apesar da resposta se parecer com um objeto, ela não é um objeto, para isso usamos a função json().
 
-O próximo then() será utilizado para pegar o objeto que foi criado pelo json para poder ser manipulado como quisermos.
+O próximo then() será utilizado para pegar o objeto que foi criado pelo json para poder ser manipulado como quiser.
 
-Nesse caso eu quero mostrar o título do primeiro array (isso porque os posts são arrays de objetos)
+Nesse caso eu quero mostrar o título do primeiro array (isso porque os posts são arrays de objetos).
 
 Lembrando que todo esse processo é feito de forma assíncrona e por isso leva um tempo até acontecer.
