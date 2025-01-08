@@ -19,4 +19,4 @@ O próximo then() será utilizado para pegar o objeto que foi criado pelo json p
 
 Nesse caso eu quero mostrar o título do primeiro array (isso porque os posts são arrays de objetos)
 
-Lembrando que todo esse processo é feito de forma assíncrona.
+Lembrando que todo esse processo é feito de forma assíncrona e por isso leva um tempo até acontecer.
