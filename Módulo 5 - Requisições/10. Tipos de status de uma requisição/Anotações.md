@@ -14,7 +14,7 @@ https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#successful_responses
 
 Os principais são os 200, 300, 400 e 500.
 
-Todos eles tem variações conforme a documentação, o que importa são esses:
+Todos eles tem variações conforme a documentação, veja os mais importantes:
 
 - 200 (muito utilizado), 201 (Algunas APIS usam), 206 (pouco usado, mas ainda se usa).
 - 301 (Principal dos 300)
