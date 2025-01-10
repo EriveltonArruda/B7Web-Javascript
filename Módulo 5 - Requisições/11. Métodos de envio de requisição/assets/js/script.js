@@ -21,7 +21,7 @@ function inserir() {
     },
     // Convertendo JSON para string
     body: JSON.stringify({
-      // conteúdo do body
+      // conteúdo do novo post
       title: 'Título de teste',
       body: 'Corpo de teste',
       userId: 2
