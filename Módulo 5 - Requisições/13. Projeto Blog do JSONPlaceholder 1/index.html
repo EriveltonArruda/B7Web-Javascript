@@ -1,11 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Eventos e Manipulação de DOM</title>
-  </head>
-  <body>
-    <script src="./assets/js/script.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projeto de Requisições</title>
+  <link rel="stylesheet" href="./assets/style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1>Blog Fake</h1>
+
+    <fieldset>
+      <legend>Inserir um novo post</legend>
+
+      <div>
+        <input id="titleField" placeholder="Título do Post" />
+      </div>
+      <div>
+        <textarea id="bodyField"></textarea>
+      </div>
+      <div>
+        <button id="insertButton">Inserir</button>
+      </div>
+    </fieldset>
+
+    <div class="posts"></div>
+  </div>
+
+  <script src="./assets/js/script.js"></script>
+</body>
+
 </html>
