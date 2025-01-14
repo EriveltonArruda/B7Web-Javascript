@@ -1,3 +1,4 @@
+// Etapa 1
 async function readPosts() {
   // Exibindo a mensagem na tela.
   let postArea = document.querySelector(".posts");
@@ -14,7 +15,7 @@ async function readPosts() {
 
     for (let i in json) {
       // colocando os posts na tela
-      let postHTML = `<div><h1>${json[i].title}</h1>${json[i].body}<hr></div>`;
+      let postHTML = `<div><h1>${ json[i].title }</h1>${ json[i].body }<hr></div>`;
       postArea.innerHTML += postHTML;
     }
   } else {
@@ -22,7 +23,9 @@ async function readPosts() {
   }
 }
 
+// Etapa 2
 async function addNewPost(title, body) {
+  // Requisição POST
   await fetch(
     'https://jsonplaceholder.typicode.com/posts',
     {

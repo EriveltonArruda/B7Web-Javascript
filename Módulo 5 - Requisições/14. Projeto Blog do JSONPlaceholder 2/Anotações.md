@@ -1,8 +1,8 @@
 ## Etapa 2 (Processo de inserir um novo post).
 
-Primeiro de tudo preciso colocar uma ação no botão de inserir, ai quando clicar nesse botão quero que ele faça uma leitura do título e do body, se eles estiverem preenchidos, a função de adição de post será executada.
+Primeiro de tudo preciso colocar uma ação no botão de inserir, porque quero que esse botão faça uma leitura do título e do body quando clicar nele, se eles estiverem preenchidos, a função de adição de post será executada.
 
-A requisição de adicionar os posts não será feita dentro do if da ação de clique, vou criar uma função que faça isso para deixar o código mais organizado
+A requisição de adicionar os posts não será feita dentro do if da ação de clique, vou criar uma função que faça isso para deixar o código mais organizado.
 
 ## Função addNewPost
 
