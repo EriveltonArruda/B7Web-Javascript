@@ -10,6 +10,9 @@ console.log(lista2);
 
 // Cria um novo array com os itens que foram true pelo filtro.
 lista2 = lista.filter((item) => {
+  // pode ser feito com ternário
+  return (item < 20) ? true : false;
+  // ou assim
   if (item < 20) {
     return true;
   } else {
@@ -20,6 +23,9 @@ console.log(lista2);
 
 // retorna true se TODOS os itens forem satisfeitos.
 lista2 = lista.every((item) => {
+  // pode ser feito com ternário
+  return (item > 20) ? true : false;
+  // ou assim
   if (item > 20) {
     return true;
   } else {
@@ -31,6 +37,9 @@ console.log(lista2);
 
 // retorna true se pelo menos um item for satisfeito.
 lista2 = lista.some((item) => {
+  // pode ser feito com ternário
+  return (item > 20) ? true : false;
+  // ou assim
   if (item > 20) {
     return true;
   } else {
