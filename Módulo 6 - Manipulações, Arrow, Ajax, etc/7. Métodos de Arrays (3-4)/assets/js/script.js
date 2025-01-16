@@ -8,7 +8,7 @@ lista2 = lista.map((item) => {
 
 console.log(lista2);
 
-// é um filtro, roda uma função que retorna true ou false (só aproveita o item se for true)
+// Cria um novo array com os itens que foram true pelo filtro.
 lista2 = lista.filter((item) => {
   if (item < 20) {
     return true;
