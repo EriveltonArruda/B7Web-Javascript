@@ -1,5 +1,6 @@
 let lista = ['Ovo', 'Farinha', 'Corante', 'Massa'];
 let lista2 = ['Prato', 'Liquidificador', 'Forno'];
+
 // Remove o item do array com base no index e a quantidade de itens
 lista.splice(0, 1);
 console.log(lista);
