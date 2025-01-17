@@ -11,7 +11,7 @@ O Date tem a opção de receber 7 parâmetros. O mínimo necessário para o Date
 1. Ano.
 2. Mês (Mês no JS começa em 0).
 3. Dia (começa do 1).
-4. Hora.
+4. Horas.
 5. Minutos.
 6. Segundos.
 7. Milésimos.
