@@ -18,4 +18,4 @@ O Date tem a opção de receber 7 parâmetros. O mínimo necessário para o Date
 
 Também podemos criar a data em um único parâmetro usando algo chamado "Date String".
 
-A data no JS começa a contar os milisegundos a partir de 01 de Janeiro de 1970, é um padrão do JS e do PHP (isso acontece colocando apenas os milisegundos no parâmetro).
+A data no JS começa a contar os milisegundos a partir de 01 de Janeiro de 1970, é um padrão do JS e do PHP (isso acontece colocando apenas os milisegundos no parâmetro (o primeiro parâmetro não aceita somente o ano, mas sim qualquer um dos parâmetros)).

@@ -9,19 +9,19 @@ console.log(d.getMonth());
 // Pega somente o dia da data que está no Date
 console.log(d.getDay());
 
-// Pega o dia atual
+// Pega o dia atual da data que está no Date
 console.log(d.getDate());
 
-// Pega a hora
+// Pega a hora da data que está no Date
 console.log(d.getHours());
 
-// Pega os minutos
+// Pega os minutos da data que está no Date
 console.log(d.getMinutes());
 
-// Pega os segundos
+// Pega os segundos da data que está no Date
 console.log(d.getSeconds());
 
-// Pega os milisegundos
+// Pega os milisegundos da data que está no Date
 console.log(d.getMilliseconds());
 
 // Retorna o Timestamp (quantidade de milisegundos de 1970 até a data atual)
