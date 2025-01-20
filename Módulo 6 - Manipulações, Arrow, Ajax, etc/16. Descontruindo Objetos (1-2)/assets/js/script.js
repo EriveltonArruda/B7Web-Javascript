@@ -21,8 +21,8 @@ console.log(nome, sobrenome, idade);
 */
 
 // Descontruindo
-let { nome, sobrenome } = pessoa;
-console.log(nome, sobrenome);
+let { nome, sobrenome, idade } = pessoa;
+console.log(nome, sobrenome, idade);
 
 // Alterando o nome da variável
 let { nome: nomePessoa, sobrenome: sobrenomePessoa, idade: idadePessoa } = pessoa;
@@ -33,5 +33,5 @@ let { idade: pessoaIdade = 32 } = pessoa;
 console.log(pessoaIdade);
 
 // Também pode ser feito assim
-let { idade = 32 } = pessoa;
-console.log(idade);
+let { idadePadrao = 32 } = pessoa;
+console.log(idadePadrao);
