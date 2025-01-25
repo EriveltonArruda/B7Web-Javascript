@@ -1,8 +1,8 @@
 ## Uso do fetch
 
-Fetch retorna uma promise.
+Fetch é quem recebe as requisições e retorna uma promise.
 
-Podemos guardá-la em uma variável ou usar sem a variável.
+Podemos guardá-la em uma variável ou usar diretamente sem variável.
 
 Essa função recebe 2 parâmetros:
 
@@ -11,8 +11,8 @@ Essa função recebe 2 parâmetros:
 
 ## Resultado da requisição
 
-para poder manipular o resultado da requisição no then, precisamos antes transformar o resultado da requisição em objeto com a função json().
+para poder manipular o resultado da requisição no primeiro then, precisamos antes transformar o resultado da requisição em objeto com a função json().
 
-Em seguida estou exibindo no segundo then o resultado da requisição na div #posts.
+Em seguida estou exibindo no segundo then o resultado da requisição já transformada em objeto na div #posts, coloquei para mostrar a quantidade de posts usando o length.
 
 Coloquei um catch para caso ocorresse algum erro.
