@@ -4,24 +4,26 @@ document.body.addEventListener('keyup', (event) => {
   playSound(event.code.toLowerCase());
 });
 
+// Composições no input
 document.querySelector('.composer button').addEventListener('click', () => {
-  // Vendo o que foi digitado no input
+  // Vendo o que foi digitado no input 
   let song = document.querySelector('#input').value;
 
-  // transformando em lista
+
   if (song !== '') {
+    // transformando em lista
     let songArray = song.split('');
     playComposition(songArray);
   }
-})
+});
 
 
 // FUNÇÕES
 function playSound(sound) {
   // Selecionando de forma dinâmica
-  let audioElement = document.querySelector(`#s_${sound}`);
+  let audioElement = document.querySelector(`#s_${ sound }`);
   // Atributo dinâmico
-  let keyElement = document.querySelector(`div[data-key= "${sound}"]`);
+  let keyElement = document.querySelector(`div[data-key= "${ sound }"]`);
 
   // Toca somente as teclas da bateria
   if (audioElement) {
@@ -32,7 +34,7 @@ function playSound(sound) {
 
   // Ativando e desativando a cor da div selecionada
   if (keyElement) {
-    keyElement.classList.toggle('active');
+    keyElement.classList.add('active');
 
     setTimeout(() => {
       keyElement.classList.remove('active');
@@ -46,7 +48,7 @@ function playComposition(songArray) {
 
   for (let songItem of songArray) {
     setTimeout(() => {
-      playSound(`key${songItem}`);
+      playSound(`key${ songItem }`);
     }, wait);
 
     wait += 250;

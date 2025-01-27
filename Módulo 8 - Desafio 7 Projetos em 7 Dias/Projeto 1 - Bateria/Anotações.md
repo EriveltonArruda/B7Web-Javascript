@@ -12,7 +12,7 @@ Para identificar qual foi a tecla que foi pressionada uso o event.code, como no 
 
 Função responsável por tocar o som ao pressionar a tecla.
 
-Nessa função eu vou criar uma função audioElement que ficará responsável por selecionar o elemento que tem a tag de áudio lá do HTML, mas eu não posso simplesmente selecionar o elemento pelo id, porque se não eu vou selecionar apenas um elemento, preciso deixar ele dinâmico então, para deixar ele dinâmico eu simplesmente uso um template string e coloco o início do id (o início de todos os ID de áudio tem "s\_" antes do key) e em seguida coloco o parãmetro sound da própria função, dessa forma se a tecla pressionada for igual ao id do HTML, o som será executado. Por exemplo:
+Nessa função eu vou criar uma função audioElement que ficará responsável por selecionar o elemento que tem a tag de áudio lá do HTML, mas eu não posso simplesmente selecionar o elemento pelo id, porque se não eu vou selecionar apenas um elemento, preciso deixar ele dinâmico, para deixar ele dinâmico eu simplesmente uso um template string e coloco o início do id (o início de todos os ID de áudio tem "s\_" antes do key) e em seguida coloco o parãmetro sound da própria função, dessa forma se a tecla pressionada for igual ao id do HTML, o som será executado. Por exemplo:
 
 ```
 Esse é um id do HTML = id="s_keyq"
@@ -29,21 +29,31 @@ Ou seja, exatamente igual ao ID que está no HTML.
 
 ---
 
-Em seguida preciso fazer uma verificação da tecla, porque se apertar a tecla "i", não existe esse id na bateria, então preciso tocar somente as letras que tem lá no ID, então se audioElement foi encontrado, ou seja, se a tecla pressionada existir no id do html, ele vai tocar o som, caso contrário não tocará nada.
+### validação audioElement
+
+Em seguida preciso fazer uma verificação da tecla, porque se apertar a tecla "i", esse id não existe na bateria, então preciso tocar somente as letras que tem lá no ID, então se audioElement foi encontrado, ou seja, se a tecla pressionada existir no id do html, ele vai tocar o som, caso contrário não tocará nada.
 
 ---
+
+### keyElement
 
 Agora que o som está funcionando ao pressionar as teclas, preciso fazer com que as divs mostrem que estão sendo pressionadas.
 
-Para fazer isso eu preciso selecionar a div pelos seus atributos data-key, no valor do data-key eu passo o ${sound} para ser dinâmico.
+Para fazer isso eu preciso selecionar a div pelos seus atributos data-key porque todas as divs estão com um data-key com valor referente à tecla, no valor do data-key eu passo o ${sound} para ser dinâmico.
 
-Também vou precisar fazer uma verificação para caso encontre a div referente ao key pressionado, ele adicione uma classe do css no elemento usando o classList.add, ao fazer isso a div fica ativa, mas tem um porém porque ela vai ficar sempre ativa e quero que ela ative e depois de um tempo a cor dela suma, então um setTimeout resolve isso, defino o tempo de 300 milisegundos e dentro do timeout eu removo a classe active.
+### validação keyElement
+
+Também vou precisar fazer uma verificação para caso encontre a div referente ao key pressionado, ele adicione uma classe do css no elemento usando o classList.add, ao fazer isso a div fica ativa, mas tem um porém porque ela vai ficar sempre ativa e quero que ela ative e depois de um tempo a cor dela suma, um setTimeout resolve isso, defino o tempo de 300 milisegundos e dentro do timeout eu removo a classe active.
+
+---
+
+### audioElement.currentTime
+
+Contudo, quando eu aperto a tecla de som várias vezes, o som só é executado pela segunda vez quando o primeiro toque termina e isso vai atrapalhar em um ritmo acelerado, então vou fazer com que o segundo áudio não espere o primeiro terminar, mas sim zerar o primeiro áudio para que o segundo toque, faço isso com o currentTime setado para 0.
 
 ---
 
-Contudo, quando eu aperto a tecla de som várias vezes, o som só é executado pela segunda vez quando o primeiro toque termina e isso vai atrapalhar em um ritmo acelerado, então o que vou fazer agora é fazer com que o segundo áudio não espere o primeiro terminar mas sim zerar o primeiro áudio para que o segundo toque, faço isso com o currentTime setado para 0.
-
----
+### composições no Input
 
 Agora eu vou colocar um evento no botão de tocar para que quando eu digite as teclas no input e aperte tocar, esse botão toque as teclas pra mim, isso é bom para criar composições.
 
@@ -54,12 +64,19 @@ Então eu seleciono o elemento e adiciono um evento de clique nele, quando um cl
 
 Antes de transformar a sequência em lista eu preciso fazer uma verificação.
 
-Dentro dessa verificação eu vou transformar em array e rodar uma função chamada playComposition.
+### if(song !== ')
+
+Se o campo estiver vazio nada será tocado.
+
+Como preciso separar a string em um array vou usar um split, assim cada letra da string será um item do array, em seguida
+vou rodar uma função chamada playComposition com o array no parâmetro.
 
 ## função playComposition()
 
-Essa função vai pegar o array e dar um loop e de tempos em tempos ir soltando a função playSong em cada um dos itens.
+Essa função vai pegar o array, dar um loop e de tempos em tempos ir soltando a função playSong em cada um dos itens.
 
-Dentro da função playSound eu mando dinâmicamente a tecla que foi pressionada.
+no parâmetro da função playSound que está no loop eu mando dinâmicamente a tecla que foi pressionada.
 
-Contudo, todas as teclas serão executadas de uma só vez dentro do loop, para evitar que isso aconteça eu preciso usar um intervalo de tempo que começa em tempos diferentes, vou fazer uma cadência de 4 sons por segundos, o que dá 250 milisegundos pra cada um, onde o primeiro começa com 0.
+### variável wait
+
+Contudo, todas as teclas serão executadas de uma só vez dentro do loop, para evitar que isso aconteça eu preciso usar um intervalo de tempo que começa em tempos diferentes, vou fazer uma cadência de 4 sons por segundo, o que dá 250 milisegundos pra cada um, onde o primeiro começa com 0 e a cada loop ele vai incrementando 250 milisegundos.
