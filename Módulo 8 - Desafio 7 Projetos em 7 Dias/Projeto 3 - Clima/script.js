@@ -4,6 +4,7 @@ document.querySelector('.busca').addEventListener('submit', async (event) => {
 
   let input = document.querySelector('#searchInput').value;
 
+  // mensagem exibida enquanto a requisuição não termina
   if (input !== '') {
     showWarning('Carregando...');
   }
@@ -37,10 +38,12 @@ function showInfo(json) {
   document.querySelector('.tempInfo').innerHTML = `${ json.temp } <sup>ºC</sup>`;
   // Deixando a primeira letra em maiúsculo
   let weatherDescription = `${ json.tempDescription.charAt(0).toUpperCase() }${ json.tempDescription.slice(1) }`;
+  // Pegando a descrição do clima
   document.querySelector('.tempDescription').innerHTML = weatherDescription;
   document.querySelector('.ventoInfo').innerHTML = `${ json.windSpeed } <span>km/h</span>`;
   // trocando a url da imagem
   document.querySelector('.temp img').setAttribute('src', `http://openweathermap.org/img/wn/${ json.tempIcon }@2x.png`);
+  // Mudando os graus do ícone do vento
   document.querySelector('.ventoPonto').style.transform = `rotate(${ json.windAngle - 90 }deg)`;
 
 }
