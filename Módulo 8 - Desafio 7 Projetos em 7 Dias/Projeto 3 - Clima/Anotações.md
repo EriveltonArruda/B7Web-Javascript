@@ -63,3 +63,13 @@ Mas como selecionar a imagem com o JS? Simples, entro na div temp e nela eu sele
 Próximo passo é mudar o ícone de vento para que ele rotacione com base nos graus.
 
 Para fazer isso precisamos selecionar o elemento ventoPonto e mudar a propriedade transform dele, contudo precisamos compensar os 90 graus do posicionamento errado do css, então diminuo 90 graus do json.windAngle.
+
+---
+
+Precisamos ajustar uma coisa antes de finalizar, perceba que depois que a requisição é concluída e você for digitar outra cidade, a requisição anterior continuará na tela, mesmo que não encontre a cidade e não podemos deixar assim, precisamos limpar a tela sempre que fizermos outra requisição.
+
+Faremos isso com uma função chamada clearInfo() e ela será colocada no antes da mensagem de carregando do meu if, no else do if que o input mostra a mensagem de carregando porque caso o usuário digite um espaço em branco e dê enter, seja feita uma nova requisição e não fique mostrando o resultado da requisição anterior, também vou colocar no else do sucesso da requisição antes da mensagem de não encontramos a localização.
+
+### função clearinfo()
+
+Vai limpar o warning e ocultar o resultado da requisição, basicamente limpar a tela.

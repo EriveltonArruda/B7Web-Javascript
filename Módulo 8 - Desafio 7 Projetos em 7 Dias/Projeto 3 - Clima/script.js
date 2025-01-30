@@ -6,26 +6,32 @@ document.querySelector('.busca').addEventListener('submit', async (event) => {
 
   // mensagem exibida enquanto a requisuição não termina
   if (input !== '') {
+    clearInfo();
     showWarning('Carregando...');
-  }
 
-  let url = `https://api.openweathermap.org/data/2.5/weather?q=${ encodeURI(input) }&appid=861e25244eab2e37ccc70d1ba12e7af0&units=metric&lang=pt_br`;
 
-  let results = await fetch(url); // fazendo a requisição
-  let json = await results.json(); // transformando em objeto
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${ encodeURI(input) }&appid=861e25244eab2e37ccc70d1ba12e7af0&units=metric&lang=pt_br`;
 
-  if (json.cod === 200) {
-    showInfo({
-      name: json.name, // nome da cidade
-      country: json.sys.country, // país
-      temp: json.main.temp, // temperatura
-      tempIcon: json.weather[0].icon, // ícone
-      tempDescription: json.weather[0].description, // Nublado, ensolarado, etc.
-      windSpeed: json.wind.speed, // Velocidade do vento
-      windAngle: json.wind.deg // ângulo do vento
-    });
+    let results = await fetch(url); // fazendo a requisição
+    let json = await results.json(); // transformando em objeto
+
+    if (json.cod === 200) {
+      showInfo({
+        name: json.name, // nome da cidade
+        country: json.sys.country,
+        temp: json.main.temp,
+        tempIcon: json.weather[0].icon,
+        tempDescription: json.weather[0].description, // Nublado, ensolarado, etc.
+        windSpeed: json.wind.speed,
+        windAngle: json.wind.deg
+      });
+    } else {
+      clearInfo();
+      showWarning('Não encontramos essa localização');
+    }
   } else {
-    showWarning('Não encontramos essa localização');
+    // limpando a tela caso digite enter sem valor no input
+    clearInfo();
   }
 });
 
@@ -51,3 +57,8 @@ function showInfo(json) {
 function showWarning(msg) {
   document.querySelector('.aviso').innerHTML = msg;
 };
+
+function clearInfo() {
+  showWarning('');
+  document.querySelector('.resultado').style.display = 'none';
+}
