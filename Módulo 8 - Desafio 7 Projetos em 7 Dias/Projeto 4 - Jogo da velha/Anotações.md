@@ -1,3 +1,4 @@
+```
 // código funcionando
 document.querySelectorAll('.item').forEach((item) => {
   // adiciona o evento de clique a cada um
@@ -14,6 +15,9 @@ document.querySelectorAll('.item').forEach((item) => {
   });
 });
 
+```
+
+```
 // código que permite que o jogador continue jogando mesmo depois de terminar
 // percorre todos os itens
 document.querySelectorAll('.item').forEach(item => {
@@ -32,7 +36,18 @@ function itemClick(event) {
     togglePlayer();
   }
 }
+```
 
 ver porque o código de cima funciona e o de baixo não.
 no de cima o jogo é pausado quando alguém vence
 no código de baixo o jogo continua...
+
+# Solução
+Precisava colocar o playing junto do quadro no if
+```
+if (playing && quadro[item] === '') {
+    quadro[item] = vez;
+    renderQuadro();
+    togglePlayer();
+  }
+```
