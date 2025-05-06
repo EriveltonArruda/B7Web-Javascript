@@ -18,22 +18,22 @@ reset();
 // Eventos
 document.querySelector('.reset').addEventListener('click', reset);
 // percorre todos os itens
-document.querySelectorAll('.item').forEach((item) => {
+document.querySelectorAll('.item').forEach(item => {
   // adiciona o evento de clique a cada um
-  item.addEventListener('click', (e) => {
-    // sabe em quem foi clicado (target contém o elemento clicado)
-    let loc = e.target.getAttribute('data-item');
-
-    // adiciona o 'x' ou o 'o' no quadro vazio que foi clicado
-    if (playing && quadro[loc] === '') {
-      quadro[loc] = vez;
-      renderQuadro();
-      togglePlayer();
-    }
-  });
+  item.addEventListener('click', itemClick)
 });
 
 // Funções
+function itemClick(event) {
+  // sabe em quem foi clicado (target contém o elemento clicado)
+  let item = event.target.getAttribute('data-item');
+  // adiciona o 'x' ou o 'o' no quadro vazio que foi clicado
+  if (playing && quadro[item] === '') {
+    quadro[item] = vez;
+    renderQuadro();
+    togglePlayer();
+  }
+}
 
 function reset() {
   // reseta a mensagem
@@ -109,33 +109,46 @@ function checkGame() {
 function checkWinnerFor(i) {
   // possibilidades de vencer
   let pos = [
+    // na horizontal
     'a1,a2,a3',
     'b1,b2,b3',
     'c1,c2,c3',
 
+    // na vertical
     'a1,b1,c1',
     'a2,b2,c2',
     'a3,b3,c3',
 
+    // na diagonal
     'a1,b2,c3',
     'a3,b2,c1'
   ];
 
-  // verifica se o player está com algumas dessas posições
+  // verifica se o player está com algumas dessas posições acima preenchidas
   for (let w in pos) {
-    // separando por vírgula
+    // cada array terá uma possibilidade separada por vírgula
     let pArray = pos[w].split(','); // a1, a2, a3
-    let hasWon = pArray.every(option => quadro[option] === i);
+    // verifica se a posição do player tá preenchida
+    let hasWon = pArray.every(option => quadro[option] === vez);
+    // se venceu, para a execução
     if (hasWon) return true;
   }
 
+  // caso não ache nenhum vencedor
   return false;
 }
+
+// Função de empate
 function isFull() {
+  // faz um loop no quadro e vê se tem algum vazio
   for (let i in quadro) {
+    // se tiver um quadro vazio
     if (quadro[i] === '') {
+      // acabou
       return false;
     }
   }
+
+  // se tiver preenchido
   return true;
 }
