@@ -21,21 +21,24 @@ Passo a passo para desenhar no canvas (são eventos)
 
 // EVENTOS
 
+// Muda as cores ao selecionar
 // Como temos várias cores, vamos usar um foreach e colocar o evento em cada uma delas
 document.querySelectorAll('.colorArea .color').forEach(item => {
   item.addEventListener('click', colorClickEvent);
 });
 
-// eventoS doS botões do mouse
+// eventos doS botões do mouse
 screen.addEventListener('mousedown', mouseDownEvent); // apertou e segurou o botão do mouse
 screen.addEventListener('mousemove', mouseMoveEvent); // movimento do mouse
 screen.addEventListener('mouseup', mouseUpEvent); // soltou o botão do mouse
-document.querySelector('.clear').addEventListener('click', clearScreen); // botão de reset
+
+// botão de reset
+document.querySelector('.clear').addEventListener('click', clearScreen);
 
 
 // FUNÇÕES
 
-// função da troca da cor
+// troca da cor
 function colorClickEvent(e) {
   let color = e.target.getAttribute("data-color"); // verificando qual cor foi clicada
   currentColor = color; // armazenando a cor que foi clicada
@@ -46,18 +49,20 @@ function colorClickEvent(e) {
 }
 
 // funções de movimento do mouse
+// segurar o botão do mouse
 function mouseDownEvent(e) {
   // ativar modo desenho
   canDraw = true;
   // pageX mostra a posição horizontal do mouse na tela
   // pageY mostra a posição vertical do mouse na tela
-  // é necessário compensar a posição para saber a posição real, por isso usamos offset
+  // é necessário compensar a posição em relação à tela para saber a posição real, por isso usamos offset.
   // offsetLeft é a distância do elemento para o fim da página na esquerda (horizontal)
   // offsetTop é a distância do elemento para o topo da página (vertical)
   mouseX = e.pageX - screen.offsetLeft;
   mouseY = e.pageY - screen.offsetTop;
 }
 
+// movimento do mouse
 function mouseMoveEvent(e) {
   if (canDraw) {
     // função que desenha
@@ -65,6 +70,7 @@ function mouseMoveEvent(e) {
   }
 }
 
+// soltar o botão do mouse
 function mouseUpEvent() {
   // desativar modo desenho
   canDraw = false;
