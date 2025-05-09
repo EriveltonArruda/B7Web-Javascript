@@ -2,7 +2,8 @@
 
 // cor que está selecionada por padrão
 let currentColor = 'black';
-let canDraw = false;
+let canDraw = false; // "modo desenho"
+// posições do mouse
 let mouseX = 0;
 let mouseY = 0;
 
@@ -26,9 +27,10 @@ document.querySelectorAll('.colorArea .color').forEach(item => {
 });
 
 // eventoS doS botões do mouse
-screen.addEventListener('mousedown', mouseDownEvent); // apertou o botão do mouse
+screen.addEventListener('mousedown', mouseDownEvent); // apertou e segurou o botão do mouse
 screen.addEventListener('mousemove', mouseMoveEvent); // movimento do mouse
 screen.addEventListener('mouseup', mouseUpEvent); // soltou o botão do mouse
+document.querySelector('.clear').addEventListener('click', clearScreen); // botão de reset
 
 
 // FUNÇÕES
@@ -49,14 +51,16 @@ function mouseDownEvent(e) {
   canDraw = true;
   // pageX mostra a posição horizontal do mouse na tela
   // pageY mostra a posição vertical do mouse na tela
-  // é necessário compensar a posição para saber a posição real
+  // é necessário compensar a posição para saber a posição real, por isso usamos offset
   // offsetLeft é a distância do elemento para o fim da página na esquerda (horizontal)
+  // offsetTop é a distância do elemento para o topo da página (vertical)
   mouseX = e.pageX - screen.offsetLeft;
   mouseY = e.pageY - screen.offsetTop;
 }
 
 function mouseMoveEvent(e) {
   if (canDraw) {
+    // função que desenha
     draw(e.pageX, e.pageY);
   }
 }
@@ -67,16 +71,16 @@ function mouseUpEvent() {
 }
 
 function draw(x, y) {
-  // pegando a posição do mouse na tela
+  // pegando a posição do mouse em relação a posição da tela
   let pointX = x - screen.offsetLeft;
   let pointY = y - screen.offsetTop;
 
-  // fazendo o desenho
-  ctx.beginPath(); // inicia o processo de desenho
+  // fazendo o desenho no contexto do canvas
+  ctx.beginPath(); // inicia o caminho onde vai desenhar
   ctx.lineWidth = 5; // grossura da linha
   ctx.lineJoin = "round"; // formato da linha (arredondada)
-  ctx.moveTo(mouseX, mouseY); // posição do mouse
-  ctx.lineTo(pointX, pointY);
+  ctx.moveTo(mouseX, mouseY); // movimento do mouse, move para a posição inicial do mouse
+  ctx.lineTo(pointX, pointY); // faz a linha do pontoX até o pontoY
   ctx.closePath(); // fecha o processo de desenho
   ctx.strokeStyle = currentColor; // colorindo a linha
   ctx.stroke(); // finaliza todo o processo
@@ -84,4 +88,11 @@ function draw(x, y) {
   // salvando a posição atual
   mouseX = pointX;
   mouseY = pointY;
+}
+
+// Função de zerar quando clicar no botão
+function clearScreen() {
+  ctx.setTransform(1, 0, 0, 1, 0, 0); // setar a posição geral na matriz 2D
+  // limpa tudo, o primeiro 0 refere-se à largura, começa na posição 0 e vai até o fim da largura, o segundo 0 refere-se à altura, então pega do começo da tela até o fim da mesma
+  ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
 }
