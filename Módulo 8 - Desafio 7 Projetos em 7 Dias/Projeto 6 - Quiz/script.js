@@ -4,7 +4,7 @@ let correctAnswers = 0;
 showQuestion(); // exibindo as questões
 
 // Events
-// Resetando o quiz (Botão "Fazer novamente")
+// Resetando o quiz no botão "Fazer novamente"
 document.querySelector('.scoreArea button').addEventListener('click', resetEvent);
 
 // Functions
