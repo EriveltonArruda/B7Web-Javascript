@@ -55,6 +55,7 @@ function closeModal() {
   }, 500);
 }
 
+// fechando o modal ao clicar em cancelar ou no botão voltar (mobile)
 cs('.pizzaInfo--cancelButton, .pizzaInfo--cancelMobileButton').forEach((item) => {
   item.addEventListener('click', closeModal);
-})
+});
