@@ -14,7 +14,7 @@ pizzaJson.map((item, index) => {
   pizzaItem.querySelector('.pizza-item--img img').src = item.img;
   pizzaItem.querySelector('.pizza-item--name').innerHTML = item.name;
   pizzaItem.querySelector('.pizza-item--desc').innerHTML = item.description;
-  pizzaItem.querySelector('.pizza-item--price').innerHTML = `R$ ${ item.price.toFixed(2) }`;
+  pizzaItem.querySelector('.pizza-item--price').innerHTML = `R$ ${item.price.toFixed(2)}`;
 
   // evento de clique para abrir o Modal
   pizzaItem.querySelector('a').addEventListener('click', (e) => {
@@ -27,7 +27,7 @@ pizzaJson.map((item, index) => {
     c('.pizzaBig img').src = pizzaJson[key].img;
     c('.pizzaInfo h1').innerHTML = pizzaJson[key].name;
     c('.pizzaInfo--desc').innerHTML = pizzaJson[key].description;
-    c('.pizzaInfo--actualPrice').innerHTML = `R$ ${ pizzaJson[key].price.toFixed(2) }`;
+    c('.pizzaInfo--actualPrice').innerHTML = `R$ ${pizzaJson[key].price.toFixed(2)}`;
 
     c('.pizzaInfo--size.selected').classList.remove('selected');
 
@@ -85,17 +85,20 @@ cs('.pizzaInfo--size').forEach((size, sizeIndex) => {
 c('.pizzaInfo--addButton').addEventListener('click', () => {
   let size = parseInt(c('.pizzaInfo--size.selected').getAttribute('data-key'));
 
-  // identificador para saber quais pizzas foram adicionadas
+  // identificador para saber quais pizzas foram adicionadas, 
+  // só serão separadas no carrinho quando tiverem tamanhos diferentes
   let identifier = pizzaJson[modalKey].id + '@' + size;
 
-  // verifica se já existe o item para poder evitar que sejam criados dois itens no carrinho quando a mesma pizza é adicionada de novo depois de já ser adicionada 1x, se não achar vai retornar -1
+  // verifica se já existe o item para poder evitar que sejam criados dois itens de mesmo tamanho no carrinho quando a pizza é adicionada de novo depois de já ser adicionada 1x, 
+  // se achar vai retornar o index do identificador, 
+  // se não achar vai retornar -1
   let key = cart.findIndex((item) => item.identifier == identifier);
 
-  // se achou o item, aumento a quantidade da pizza, já que é a mesma pizza, só aumento a quantidade mesmo
+  // verifica se no carrinho já existe o identificador que está sendo adicionado, se existir a quantidade será aumentada
   if (key > -1) {
     cart[key].qt += modalQt;
   } else {
-    // não achou, ou seja, o usuário não adicionou a pizza no carrinho, então adiciono com o push
+    // não existe, ou seja, o usuário não adicionou aquela pizza no carrinho, então adiciono com o push
     cart.push({
       identifier,
       id: pizzaJson[modalKey].id,
