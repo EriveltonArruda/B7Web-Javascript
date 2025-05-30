@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Slideshow</title>
     <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
     <header>
         <div class="header"></div>
@@ -14,6 +16,7 @@
                 <div class="slider--control" onclick="goPrev()">voltar</div>
                 <div class="slider--control" onclick="goNext()">próxima</div>
             </div>
+            <!-- em um slider, quem se move é a div, não as imagens, ela sempre se move a esquerda -->
             <div class="slider--width">
                 <div class="slider--item" style="background-image: url('images/1.jpg');">
                     Viva o Surf
@@ -33,4 +36,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
