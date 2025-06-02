@@ -12,11 +12,22 @@ header {
 .header {
   height: 50px;
   background-color: #ff0000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
 }
 .slider {
-  width: 100vw;
-  height: 850px;
+  margin: auto;
+  align-items: center;
+  /* width: 100vw; */ /* Tamanho da tela */
+  width: 800px; /* tamanho fixo (Para quadrado) */
+  height: 500px; /* tamanho fixo (Para quadrado) */
+  /* height: 850px; */ /* Tamanho da tela */
   overflow: hidden;
+  margin-top: 100px;
 }
 .slider--width {
   height: 100%;
@@ -38,7 +49,6 @@ header {
 .slider--controls {
   position: absolute;
   z-index: 99;
-  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -50,4 +60,17 @@ header {
   border-radius: 50%;
   overflow: hidden;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider--control svg {
+  width: 30px;
+  height: 30px;
+}
+
+section {
+  display: flex;
+  justify-content: center;
 }

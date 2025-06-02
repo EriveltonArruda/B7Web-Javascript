@@ -1,18 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Slideshow</title>
     <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
     <header>
-        <div class="header"></div>
+        <div class="header">Projeto Slide Show</div>
         <div class="slider">
             <div class="slider--controls">
-                <div class="slider--control" onclick="goPrev()">voltar</div>
-                <div class="slider--control" onclick="goNext()">próxima</div>
+                <div class="slider--control" onclick="goPrev()">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18" />
+                    </svg>
+                </div>
+                <div class="slider--control" onclick="goNext()">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                    </svg>
+                </div>
             </div>
             <div class="slider--width">
                 <div class="slider--item" style="background-image: url('images/1.jpg');">
@@ -33,4 +47,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
