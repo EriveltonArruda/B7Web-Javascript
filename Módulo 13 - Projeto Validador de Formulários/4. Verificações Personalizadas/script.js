@@ -46,6 +46,7 @@ let B7Validator = {
 
       // verificando cada uma das regras
       for (let k in rules) {
+        // servirá para separar o min=
         let rDetails = rules[k].split('=');
 
         // Ações de cada regra
@@ -59,7 +60,7 @@ let B7Validator = {
             break;
           case 'min':
             if (input.value.length < rDetails[1]) {
-              return `Campo tem que ter pelo menos ${rDetails[1]} caracteres`
+              return `Campo tem que ter pelo menos ${ rDetails[1] } caracteres`
             }
             break;
           case 'email':
@@ -69,7 +70,7 @@ let B7Validator = {
 
               // testando com o valor passado no input
               if (!regex.test(input.value.toLowerCase())) {
-                return 'E=mail digitado não é válido!';
+                return 'E-mail digitado não é válido!';
               }
             }
             break;
@@ -95,8 +96,7 @@ let B7Validator = {
     // Os parâmetros do insertBefore são:
     // O que quer exibir (errorElement)
     // antes de qual elemento será exibido (input)
-    // para colocar embaixo do campo de input,
-    // use o ElementSibling
+    // ElementSibling serve para colocar embaixo do campo de input
     input.parentElement.insertBefore(errorElement, input.ElementSibling);
   },
 
